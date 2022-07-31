@@ -1,0 +1,72 @@
+.homeBanner{
+    position: sticky;
+
+    top: 0px;
+    background-color: white;
+}
+
+.homeTabs{
+    width: 50%;
+    
+    margin: 0 auto;
+
+    padding: 0px;
+
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+#homeButton:hover {
+    text-decoration: underline;
+    color: darkblue;
+}
+
+#socialMediaIcons {
+    /* Positional Values for the icons */
+    width: 25%;
+    position: relative;
+    top: 20px;
+    left: 50px;
+}
+
+a:visited {
+    color: black;
+}
+
+a:hover{
+    color: darkblue;
+}
+
+.contactMe{
+    width: 25%;
+    text-align: right;
+
+    position: relative;
+    right: 50px;
+
+    margin-left: auto;
+
+    transform: translateY(-23px);
+    
+}
+
+#contactButton{
+    color: black;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+
+    border: none;
+    padding: 15px;
+}
+
+#contactButton:hover {
+    color: darkblue;
+}
+
+#myPicture{
+    width: 25%;
+    height: 100%;
+    float: right;
+
+    margin-left: auto;
+}
