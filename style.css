@@ -1,24 +1,19 @@
-.homeBanner{
+.homeBanner {
     position: sticky;
 
     top: 0px;
     background-color: white;
 }
 
-.homeTabs{
+.homeTabs {
     width: 50%;
-    
+
     margin: 0 auto;
 
-    padding: 0px;
+    padding: 0.5em;
 
     text-align: center;
     font-family: "Montserrat", sans-serif;
-}
-
-#homeButton:hover {
-    text-decoration: underline;
-    color: darkblue;
 }
 
 #socialMediaIcons {
@@ -29,15 +24,23 @@
     left: 50px;
 }
 
+a {
+    padding: 0.5em;
+}
+
+a:link {
+    color: black;
+}
+
 a:visited {
     color: black;
 }
 
-a:hover{
+a:hover {
     color: darkblue;
 }
 
-.contactMe{
+.contactMe {
     width: 25%;
     text-align: right;
 
@@ -47,10 +50,10 @@ a:hover{
     margin-left: auto;
 
     transform: translateY(-23px);
-    
+
 }
 
-#contactButton{
+#contactButton {
     color: black;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
@@ -63,10 +66,52 @@ a:hover{
     color: darkblue;
 }
 
-#myPicture{
+#myPicture {
     width: 25%;
     height: 100%;
     float: right;
 
+    animation: 1.5s welcomeZoom;
+
     margin-left: auto;
+}
+
+#caption {
+    text-align: center;
+    color: grey;
+    font-size: 10px;
+
+    animation: 3s captionFadeIn;
+
+    font-family: Montserrat, sans-serif;
+}
+
+.summary {
+    background: linear-gradient();
+}
+
+#welcome {
+    width: 74%;
+    height: 475px;
+    float: left;
+
+    animation: 3s welcomeZoom;
+
+    margin-right: auto;
+}
+
+#welcomeText {
+    font-family: "Montserrat", sans-serif;
+
+    position: relative;
+    text-align: center;
+}
+
+@keyframes welcomeZoom {
+    0% { transform: scale(0.5, 0.5);}
+}
+
+@keyframes captionFadeIn {
+    from {opacity: 0%;}
+    to {opacity: 100%;}
 }
