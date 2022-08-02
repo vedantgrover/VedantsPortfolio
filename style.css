@@ -128,6 +128,7 @@ a:hover {
     text-align: center;
 
     transform: translateY(-94%);
+    margin-right: auto;
 }
 
 #robotics {
@@ -157,6 +158,32 @@ a:hover {
     border: solid;
     text-align: center;
     transform: translateY(-300%);
+}
+
+#snakeGame {
+    text-align: center;
+
+    transform: translateY(-50%);
+}
+
+#gameBoard {
+    border: 3px solid;
+    background-color: white;
+}
+
+#scoreText {
+    font-family: "Montserrat", sans-serif;
+    font-size: 75px;
+}
+
+#resetBtn {
+    font-family: "Montserrat", sans-serif;
+    font-size: 11px;
+    width: 75px;
+    height: 25px;
+    border: 4px solid;
+    border-radius: 15px;
+    cursor: pointer;
 }
 
 @keyframes welcomeZoom {
