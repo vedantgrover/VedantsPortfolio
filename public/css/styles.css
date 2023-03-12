@@ -24,7 +24,8 @@ a {
     background-color: white;
 }
 
-.nav-item-link, .nav-item {
+.nav-item-link,
+.nav-item {
     margin-top: 30px;
     font-size: 25px;
 }
@@ -58,3 +59,29 @@ a {
 }
 
 /* Footer Styling */
+.footer {
+    background-color: white;
+    padding-left: 100px;
+    padding-right: 100px;
+
+    bottom: 0px;
+    width: 100%;
+    height: 99%;
+
+    clear: both;
+    height: 150px;
+    z-index: 90000;
+}
+
+#footer-brand {
+    font-size: 64px;
+}
+
+#socials {
+    font-size: 32px;
+
+    display: inline;
+
+    position: relative;
+    left: 81%;
+}
