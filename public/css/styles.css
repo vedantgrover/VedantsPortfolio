@@ -48,4 +48,13 @@ a {
     margin-left: 100px;
 }
 
+#header-separation {
+    size: 1px;
+    width: 80%;
+    margin: auto;
+
+    position: sticky;
+    top: 150px;
+}
+
 /* Footer Styling */
