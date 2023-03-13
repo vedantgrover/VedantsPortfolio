@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/fc9d572b-f10a-490d-88ba-784610a88e6f/resourceGroups/PortfolioWebsite/providers/Microsoft.Web/sites/vedants-portfolio",
+    "appService.deploySubpath": "."
+}
