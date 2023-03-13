@@ -21,10 +21,10 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm start
+      - name: Starting Web App
         run: |
           npm install
-          npm start
+          npm start-azure
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
