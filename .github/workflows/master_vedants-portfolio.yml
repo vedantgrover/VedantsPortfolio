@@ -24,7 +24,6 @@ jobs:
       - name: Starting Web App
         run: |
           npm install
-          node app
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
