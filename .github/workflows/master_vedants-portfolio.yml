@@ -24,7 +24,7 @@ jobs:
       - name: Starting Web App
         run: |
           npm install
-          npm start-azure
+          node app
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
