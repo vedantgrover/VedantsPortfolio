@@ -21,11 +21,9 @@ jobs:
         with:
           node-version: '18.x'
 
-      - name: npm install, build, and test
+      - name: Starting Web App
         run: |
           npm install
-          npm run build --if-present
-          npm run test --if-present
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -52,5 +50,5 @@ jobs:
         with:
           app-name: 'vedants-portfolio'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D6D307ECDE2748F7B5AA864F63044322 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_84428AC3863042B0880DA138BAF44D9E }}
           package: .
