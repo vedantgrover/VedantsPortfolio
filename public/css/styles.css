@@ -1,6 +1,9 @@
 /* Generic Styling */
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+    padding-left: 100px;
+    padding-right: 100px;
 }
 
 a {
@@ -8,11 +11,6 @@ a {
     text-decoration: none;
     padding: 15px;
 }
-
-/* a:hover {
-    border-style: solid;
-    border-radius: 15px;
-} */
 
 /* Home Page Styling */
 
@@ -35,18 +33,17 @@ a {
     border-radius: 15px;
 }
 
-#navbar-link-home {
+/* #navbar-link-home {
     margin-right: 15px;
 }
 
 #navbar-link-contact {
     margin-right: 100px;
-}
+} */
 
 #navbar-brand {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 50px;
-    margin-left: 100px;
 }
 
 #header-separation {
@@ -60,13 +57,10 @@ a {
 
 /* Footer Styling */
 .footer {
-    background-color: white;
-    padding-left: 100px;
-    padding-right: 100px;
-
     bottom: 0px;
     width: 100%;
-    height: 99%;
+
+    position: relative;
 
     clear: both;
     height: 150px;
@@ -82,6 +76,7 @@ a {
 
     display: inline;
 
-    position: relative;
-    left: 81%;
+    position: absolute;
+    top: 50%;
+    left: 67%;
 }
