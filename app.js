@@ -3,7 +3,7 @@ const express = require("express");
 require('dotenv').config()
 
 const app = express();
-const port = process.env.PORT || 3000;
+const port = process.env.STATUS === "production" ? process.env.PROD_PORT : process.env.DEV_PORT;
 
 // Static Files
 app.use(express.static('public'));
