@@ -24,6 +24,7 @@ jobs:
       - name: npm install, build, and test
         run: |
           npm install
+          npm run build --if-present
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -50,5 +51,5 @@ jobs:
         with:
           app-name: 'vedants-portfolio'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_08E3C5B25FBB4E1AA6ABF8493453CB79 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7C0E252187124A1C9B380DEA834CBF65 }}
           package: .
