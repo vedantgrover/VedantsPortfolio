@@ -13,48 +13,6 @@ a {
 }
 
 /* Home Page Styling */
-.home-page-container {
-    border-style: solid;
-    width: fit-content;
-    height: fit-content;
-
-    position: relative;
-}
-
-.intro-text {
-    width: max-content;
-    height: max-content;
-
-    padding: 250px;
-
-    background: radial-gradient(ghostwhite, white);
-}
-
-.hello-world-text {
-    font-size: 18px;
-
-    text-align: center;
-}
-
-.name-text {
-    font-size: 72px;
-}
-
-.bottom-text {
-    font-size: 18px;
-
-    text-align: center;
-}
-
-.image-container {
-    border-style: dashed;
-    border-color: black;
-
-    width: 10%;
-    height: 100%;
-
-    position: relative;
-}
 
 /* Header Styling */
 #navbar {
