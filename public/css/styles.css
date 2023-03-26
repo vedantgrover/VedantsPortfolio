@@ -22,6 +22,11 @@ a {
     background-color: white;
 }
 
+#navbar-link-home {
+    margin-right: 5px;
+    border-radius: 15px;
+}
+
 .nav-item-link,
 .nav-item {
     margin-top: 30px;
