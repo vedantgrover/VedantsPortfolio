@@ -29,7 +29,9 @@ a {
 .image-container {
     padding-top: 15px;
     padding-bottom: 15px;
+    overflow: hidden;
     float: right;
+    display: flex;
 
     width: 33%;
 }
