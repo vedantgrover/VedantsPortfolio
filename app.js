@@ -8,6 +8,12 @@ const port = 8080;
 app.use(express.static('public'));
 app.use('/css', express.static(__dirname + "public/css"));
 
+app.use(express.static('public'));
+app.use('/images', express.static(__dirname + "public/images"));
+
+app.use(express.static('public'));
+app.use('/js', express.static(__dirname + "public/js"));
+
 // Set Views
 app.set('views', './views');
 app.set('view engine', 'ejs');

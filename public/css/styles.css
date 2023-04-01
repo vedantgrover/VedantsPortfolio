@@ -13,6 +13,45 @@ a {
 }
 
 /* Home Page Styling */
+.welcome-page {
+    display: inline;
+}
+
+.welcome-text {
+    width: 66.666666666666666666666666666666666%;
+    float: left;
+}
+
+.intro-text {
+    padding: 150px;
+}
+
+.image-container {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    float: right;
+
+    width: 33%;
+}
+
+#me-image {
+    width: 100%;
+    height: 100%;
+
+    border-top-left-radius: 30%;
+    border-bottom-right-radius: 30%;
+
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+#upper-text {
+    font-size: 72px;
+}
+
+#name-text {
+    font-size: 110px;
+}
 
 /* Header Styling */
 #navbar {
