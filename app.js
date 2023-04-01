@@ -21,5 +21,5 @@ app.get('/contact', (req, res) => {
     res.render('contact')
 })
 
-// Listen on port 3000
+// Listen on port
 app.listen(port, () => console.info(`Listening on port ${port}`));
