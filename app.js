@@ -1,8 +1,21 @@
 // Imports
 const express = require("express");
+const mongoose = require("mongoose");
+require('dotenv').config();
 
 const app = express();
+
 const port = 8080;
+const mongoDBURI = process.env.DATABASE_SRV;
+
+async function connect() {
+    try {
+        await mongoose.connect(mongoDBURI);
+        console.log("Connected to MongoDB");
+    } catch (error) {
+        console.log(error);
+    }
+}
 
 // Static Files
 app.use(express.static('public'));
@@ -25,6 +38,9 @@ app.get('', (req, res) => {
 app.get('/contact', (req, res) => {
     res.render('contact')
 })
+
+// Connecting to MongoDB
+connect();
 
 // Listen on port
 app.listen(port, () => console.info(`Listening on port ${port}`));
