@@ -34,8 +34,6 @@ app.use('/js', express.static(__dirname + "public/js"));
 app.set('views', './views');
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.json());
-
 app.get('', (req, res) => {
     res.render('index');
 });
@@ -47,27 +45,6 @@ app.get('/contact', (req, res) => {
 app.get('/login', (req, res) => {
     res.render('login');
 })
-
-// app.post('/login-user', async (req, res) => {
-//     const { username, password } = req.body;
-
-//     try {
-//         let user = await adminModel.find({
-//             username: username,
-//             password: password
-//         }).then(data => {
-//             if (data.length) {
-//                 res.json(data[0]);
-//             } else {
-//                 res.json('Email or Password is incorrect');
-//             }
-//         });
-
-//         console.log(user);
-//     } catch(err) {
-//         console.log(err);
-//     };
-// });
 
 // Connecting to MongoDB
 connect();
