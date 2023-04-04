@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,6 +9,7 @@
 
     <link rel="stylesheet" href="css/login.css">
 </head>
+
 <body>
 
     <div class="alert-box">
@@ -16,12 +18,17 @@
 
     <div class="form">
         <h1 class="heading">Login</h1>
-        <input type="text" placeholder="username" autocomplete="off" class="username" required>
-        <input type="password" placeholder="password" autocomplete="off" class="password" required>
+        <input type="text" placeholder="username" autocomplete="off" class="username" id="username" required>
+        <input type="password" placeholder="password" autocomplete="off" class="password" id="password" required>
 
-        <button class="submit-btn">Login</button>
+        <button class="submit-btn" id="login-btn">Login</button>
+
+        <p id="btn-test">Not pressed</p>
+        <p id="test">Login Not Attempted</p>
     </div>
-
-    <script src="js/login.js"></script>
 </body>
+
+<script src="js/login.js"></script>
+<script src="js/validation-handling.js"></script>
+
 </html>

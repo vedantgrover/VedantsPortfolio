@@ -12,12 +12,11 @@ const port = 8080;
 const mongoDBURI = process.env.DATABASE_SRV;
 
 async function connect() {
-    try {
-        await mongoose.connect(mongoDBURI);
-        console.log("Connected to MongoDB");
-    } catch (error) {
-        console.log(error);
-    }
+    mongoose.connect(mongoDBURI);
+    const db = mongoose.connection;
+
+    db.once('open', function () { console.log("Connected to MongoDB successfully") });
+    db.on('error', function () { console.log(err) });
 }
 
 // Static Files
