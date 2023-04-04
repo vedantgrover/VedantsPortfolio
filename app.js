@@ -5,7 +5,7 @@ require('dotenv').config();
 
 const app = express();
 
-const port = 8080;
+const port = process.env.PORT;
 const mongoDBURI = process.env.DATABASE_SRV;
 
 async function connect() {
