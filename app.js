@@ -1,19 +1,28 @@
 // Imports
 const express = require("express");
-const mongoose = require("mongoose");
+const { MongoClient, ServerApiVersion } = require("mongodb");
 require('dotenv').config();
 
 const app = express();
 
 const port = process.env.PORT;
-const mongoDBURI = process.env.DATABASE_SRV;
+const databaseSRV = process.env.DATABASE_SRV
+
+const client = new MongoClient(databaseSRV, {
+    serverApi: {
+        version: ServerApiVersion.v1,
+        strict:true,
+        deprecationErrors: true
+    }
+});
 
 async function connect() {
     try {
-        await mongoose.connect(mongoDBURI);
-        console.log("Connected to MongoDB");
-    } catch (error) {
-        console.log(error);
+        await client.connect();
+        await client.db("admin").command({ ping: 1});
+        console.log("Pinged deployment\nYou are connected to MongoDB");
+    } finally {
+        await client.close();
     }
 }
 
@@ -40,7 +49,7 @@ app.get('/contact', (req, res) => {
 })
 
 // Connecting to MongoDB
-connect();
+connect().catch(console.dir);
 
 // Listen on port
 app.listen(port, () => console.info(`Listening on port ${port}`));
