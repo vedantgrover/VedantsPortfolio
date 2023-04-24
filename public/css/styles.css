@@ -84,15 +84,6 @@ a {
     font-size: 50px;
 }
 
-#header-separation {
-    size: 1px;
-    width: 80%;
-    margin: auto;
-
-    position: sticky;
-    top: 150px;
-}
-
 /* Footer Styling */
 .footer {
     bottom: 0px;
