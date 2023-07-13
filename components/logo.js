@@ -22,7 +22,6 @@ const Logo = () => {
 
     return (
         <Link href="/">
-
             <LogoBox>
                 {/* <Image src={logoImg} width={20} height={20} alt="logo" /> */}
                 <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}
@@ -30,7 +29,6 @@ const Logo = () => {
                     fontWeight="bold"
                     ml={3}>Vedant Grover</Text>
             </LogoBox>
-
         </Link>
     )
 }
