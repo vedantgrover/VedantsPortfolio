@@ -18,5 +18,21 @@ padding: 10px;
 }`
 
 const Logo = () => {
-    
+    const logoImg = `/images/logo${useColorModeValue('', '-dark')}.png`
+
+    return (
+        <Link href="/">
+
+            <LogoBox>
+                {/* <Image src={logoImg} width={20} height={20} alt="logo" /> */}
+                <Text color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+                    fontFamily='M PLUS Rounded 1c, sans-serif'
+                    fontWeight="bold"
+                    ml={3}>Vedant Grover</Text>
+            </LogoBox>
+
+        </Link>
+    )
 }
+
+export default Logo
