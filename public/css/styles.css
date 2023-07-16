@@ -25,7 +25,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 7%;
-    background: yellowgreen;
+    background: transparent;
     display: flex;
     align-items: center;
     z-index: 100;
@@ -137,4 +137,88 @@ body {
     background-color: transparent;
     color: var(--main-color);
     border-color: var(--main-color);
+}
+
+.home .profession-container {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 768px;
+    height: 768px;
+    overflow: hidden;
+}
+
+.profession-container .profession-box {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50% ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profession-box .profession {
+    position: absolute;
+    left: 0;
+    transform-origin: 384px;
+    transform: rotate(calc(360deg / 4 * var(--i)));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--main-color);
+    background: var(--primary-color);
+    padding: 13px 0;
+}
+
+.profession-box .profession:nth-child(1) i {
+    margin-right: 15%;
+}
+
+.profession-box .profession:nth-child(2) {
+    padding-bottom: 20px;
+}
+
+.profession-box .profession:nth-child(4) {
+    padding-bottom: 20px;
+}
+
+.profession i {
+    font-size: 38px;
+}
+
+.profession h3 {
+    font-size: 32px;
+    line-height: 1;
+    font-weight: 600;
+}
+
+.profession-box .circle {
+    width: 72%;
+    height: 72%;
+    border: 3px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.profession-container .overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 0;
+    border-top: 384px solid var(--main-color);
+    border-right: 384px solid var(--main-color);
+    border-bottom: 384px solid var(--main-color);
+    border-left: 384px solid transparent;
+}
+
+.home-img img {
+    position: absolute;
+    bottom: 7%;
+    right: 0;
+    width: 33.3333333333%;
+    pointer-events: none;
 }
