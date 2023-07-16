@@ -83,12 +83,14 @@ body {
 }
 
 .home-content h3 {
-   font-size: 32px; 
+   font-size: 32px;
+   line-height: .3; 
 }
 
 .home-content h1 {
     font-size: 56px;
     font-weight: 700;
+    margin-bottom: 3px;
 }
 
 .home-content p {
@@ -115,4 +117,24 @@ body {
 .social-media a:hover {
     background: var(--main-color);
     color: #fff;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: var(--main-color);
+    border-radius: 6px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    border: 2px solid transparent;
+    color: #fff;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s ease;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--main-color);
+    border-color: var(--main-color);
 }
