@@ -8,24 +8,43 @@
     <title>Home - Vedant Grover</title>
 
     <link rel="stylesheet" href="css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
-<%- include("partials/header.ejs") %>
 
-    <body>
-        <div class="welcome-page">
-            <div class="welcome-text">
-                <div class="intro-text">
-                    <h4 id="upper-text">Hey there...</h4>
-                    <h1 id="name-text">I'm Vedant!</h1>
-                </div>
-            </div>
+<body>
+    <header class="header">
+        <a href="#" class="logo">Vedant.</a>
 
-            <div class="image-container">
-                <img src="images/me.png" alt="This is me!" id="me-image">
-            </div>
+        <nav class="navbar">
+            <a href="#" class="active">Home</a>
+            <a href="#">About</a>
+            <a href="#">Skills</a>
+            <a href="#">Portfolio</a>
+            <a href="#">Contact</a>
+        </nav>
+
+        <div class="toggle">
+            <i class='bx bx-moon toggle-icon'></i>
         </div>
-    </body>
+    </header>
 
-    <%- include("partials/footer.ejs") %>
+    <section class="home">
+        <div class="home-content">
+            <h3>Hello, I am</h3>
+            <h1>Vedant Grover</h1>
+            <p>An aspiring computer science student looking to make the world a better place through software.</p>
+
+            <div class="social-media">
+                <a href="#"><i class='bx bxl-github' ></i></i></a>
+                <a href="#"><i class='bx bxl-instagram' ></i></a>
+                <a href="#"><i class='bx bxl-youtube' ></i></a>
+                <a href="#"><i class='bx bxl-linkedin' ></i></a>
+            </div>
+
+            <a href="#" class="btn">Contact Me</a>
+        </div>
+    </section>
+
+</body>
 
 </html>
