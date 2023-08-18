@@ -8,7 +8,6 @@ export default function Main({ children }: any) {
       <Head>
         <meta name="description" content="Vedant's Portfolio" />
         <meta name="author" content="Vedant Grover" />
-        <meta name="viewport" content="width=device-width, initial-scale=1;" />
       </Head>
 
       <Navbar />
