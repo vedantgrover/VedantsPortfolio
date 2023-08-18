@@ -1,4 +1,5 @@
 import ProjectBox from "@/components/projectBox";
+import Head from "next/head";
 
 export default function Projects() {
   const projects = [
@@ -29,36 +30,42 @@ export default function Projects() {
   ];
 
   return (
-    <div className="my-16 sm:my-32 mx-auto max-w-2xl lg:max-w-5xl">
-      <header className="max-w-2xl">
-        <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
-          Innovations I&apos;ve made to try and leave my mark on this universe.
-        </h1>
-        <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
-          Code is my canvas, where I paint imaginative solutions and bring ideas
-          to life. My mission? To use my craft to make a positive dent in the
-          universe, one pixel at a time.
-        </p>
-      </header>
-      <div className="mt-16 sm:mt-20">
-        <ul
-          role="list"
-          className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
-        >
-          {projects.map((project) => {
-            return (
-              <ProjectBox
-                key={project.projectName}
-                title={project.projectName}
-                logo={project.projectLogo}
-                description={project.description}
-                link={project.link}
-                languages={project.languages}
-              />
-            );
-          })}
-        </ul>
+    <>
+      <Head>
+        <title>Contact - Vedant Grover</title>
+      </Head>
+      <div className="my-16 sm:my-32 mx-auto max-w-2xl lg:max-w-5xl">
+        <header className="max-w-2xl">
+          <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
+            Innovations I&apos;ve made to try and leave my mark on this
+            universe.
+          </h1>
+          <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
+            Code is my canvas, where I paint imaginative solutions and bring
+            ideas to life. My mission? To use my craft to make a positive dent
+            in the universe, one pixel at a time.
+          </p>
+        </header>
+        <div className="mt-16 sm:mt-20">
+          <ul
+            role="list"
+            className="grid grid-cols-1 gap-x-12 gap-y-16 sm:grid-cols-2 lg:grid-cols-3"
+          >
+            {projects.map((project) => {
+              return (
+                <ProjectBox
+                  key={project.projectName}
+                  title={project.projectName}
+                  logo={project.projectLogo}
+                  description={project.description}
+                  link={project.link}
+                  languages={project.languages}
+                />
+              );
+            })}
+          </ul>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
