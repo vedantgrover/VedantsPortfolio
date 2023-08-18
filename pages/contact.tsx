@@ -14,7 +14,7 @@ export default function Contact() {
     e.preventDefault();
 
     const response = await fetch(
-      `http://localhost:3000/api/email?email=${email}`,
+      `http://vedantgrover.com/api/email?email=${email}`,
       {
         method: "POST",
         headers: {
