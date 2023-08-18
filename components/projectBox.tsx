@@ -8,15 +8,6 @@ interface ProjectProps {
   logo: string;
   description: string;
   link: string;
-  languages: string[];
-}
-
-function formatLanguages(languages: string[]) {
-  if (languages.length === 0) {
-    return "No languages specified";
-  } else if (languages.length === 1) {
-    return languages[0];
-  }
 }
 
 export default function ProjectBox({
@@ -24,7 +15,6 @@ export default function ProjectBox({
   logo,
   description,
   link,
-  languages,
 }: ProjectProps) {
   const getHostName = (url: string) => {
     try {

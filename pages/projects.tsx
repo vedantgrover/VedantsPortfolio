@@ -9,7 +9,6 @@ export default function Projects() {
       description:
         "Introducing Apollo18, my cool Discord Bot adventure! It&apos;s not just a bot, but my coding journey from APIs to Databases and beyond. I picked up all the tricks while working on it, and when it started impressing folks, I decided to share the love. Now it&apos;s open-source, so anyone can join in and help take Apollo18 to new heights!",
       link: "https://github.com/vedantgrover/Apollo18",
-      languages: [""],
     },
     {
       projectName: "Typical Programming",
@@ -17,7 +16,6 @@ export default function Projects() {
       description:
         "I built my own programming language from scratch using Python, an adventure that not only introduced me to the language but also deepened my understanding of programming languages&apos; inner workings. This journey ignited my passion for coding and expanded my insights into the fascinating world of programming languages.",
       link: "https://github.com/vedantgrover/TypicalProgramming",
-      languages: [""],
     },
     {
       projectName: "BladeCraft",
@@ -25,7 +23,6 @@ export default function Projects() {
       description:
         "Say hello to my Minecraft mod! It&apos;s where my coding journey began – my way of spicing up Minecraft and making it a real blast. While I might&apos;ve taken a break from it, I&apos;m always hungry for new ideas to make it even cooler. It&apos;s like my personal sandbox where the possibilities are endless!",
       link: "https://github.com/vedantgrover/BladeCraftForge",
-      languages: [""],
     },
   ];
 
@@ -59,7 +56,6 @@ export default function Projects() {
                   logo={project.projectLogo}
                   description={project.description}
                   link={project.link}
-                  languages={project.languages}
                 />
               );
             })}
