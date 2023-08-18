@@ -44,7 +44,7 @@ export default function Contact() {
       <div className="mt-16 flex space-x-24">
         <div className="max-w-xs px-2.5 lg:max-w-none">
           <Image
-            src="/images/king_vedant.jpg"
+            src="/images/vedant_with_green.JPEG"
             alt="King Vedant"
             loading="lazy"
             width={500}
