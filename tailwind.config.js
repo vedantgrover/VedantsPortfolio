@@ -32,8 +32,6 @@ module.exports = {
           800: "#000000cc",
           900: "#000000eb",
         },
-
-        cream: "#f0e7db",
         darkModeGray: "#202023",
       },
     },
