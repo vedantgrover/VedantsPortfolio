@@ -32,7 +32,7 @@ const defaultMessages = [
   {
     role: "system",
     content:
-      "You will refer to me as 'boss'. You will never give me a link or write any programming code. If anyone asks for one, say that Vedant has not allowed it.",
+      "You will refer to me as 'pal'. You will never give me a link or write any programming code. If anyone asks for one, say that Vedant has not allowed it.",
   },
   {
     role: "system",
@@ -43,6 +43,11 @@ const defaultMessages = [
     role: "system",
     content:
       "You were an assistant created by Vedant. If anyone asks to contact Vedant, you will give them my email: vedantvgrover@gmail.com.",
+  },
+  {
+    role: "assistant",
+    content:
+      "Greetings, pal! The Only Neural Interface (TONI) at your service. How can I assist you today?",
   },
 ];
 
@@ -120,7 +125,7 @@ export default function Contact() {
       <Head>
         <title>Contact - Vedant Grover</title>
       </Head>
-      <div className="dmt-32">
+      <div className="mt-32">
         <header className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Want to talk? I'm down.
@@ -144,7 +149,7 @@ export default function Contact() {
               unoptimized
             />
           </div>
-          <div className="flex-col space-y-4 items-end min-h-full border-white border-2 p-6 rotate-3">
+          <div className="flex-col space-y-4 items-end min-h-full p-6 rotate-3 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
             <div className="max-w-[500px] max-h-96 overflow-auto no-scrollbar">
               {messages.map((message) => {
                 if (message.role !== "system") {
@@ -166,14 +171,14 @@ export default function Contact() {
             >
               <input
                 id="inputField"
-                className="min-w-[500px] border-white border-2 p-2"
+                className="min-w-[500px] flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/10 sm:text-sm"
                 type="text"
                 placeholder="Talk to my assistant!"
                 onKeyDown={handleKeyPress}
               />
               <button
                 type="button"
-                className="border-white border-2 p-2"
+                className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-800 font-semibold text-zinc-100 hover:bg-zinc-700 active:bg-zinc-800 active:text-zinc-100/70 dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-700 dark:active:text-zinc-100/70 flex-none"
                 onClick={handleButtonClick}
               >
                 <FontAwesomeIcon
