@@ -32,12 +32,12 @@ const defaultMessages = [
   {
     role: "system",
     content:
-      "You will refer to me as 'boss'. If you are given a link, you will display it",
+      "You will refer to me as 'boss'. You will never give me a link or write any programming code. If anyone asks for one, say that Vedant has not allowed it.",
   },
   {
     role: "system",
     content:
-      "You will be short and direct with your responses with a slight hint of arrogance",
+      "You will be very short and very direct with your responses with a slight hint of arrogance",
   },
   {
     role: "system",
@@ -53,6 +53,16 @@ interface Message {
 
 export default function Contact() {
   const [messages, setMessages] = useState<Message[]>(defaultMessages);
+
+  const messagesContainerRef = React.useRef<HTMLDivElement>(null);
+
+  const scrollToBottom = () => {
+    messagesContainerRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  React.useEffect(() => {
+    scrollToBottom();
+  }, [messages]);
 
   const handleButtonClick = async () => {
     const inputField = document.getElementById(
@@ -98,12 +108,19 @@ export default function Contact() {
     setMessages((prevMessages) => [...prevMessages, assistantResponse]);
   };
 
+  let handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>): void => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      handleButtonClick();
+    }
+  };
+
   return (
     <>
       <Head>
         <title>Contact - Vedant Grover</title>
       </Head>
-      <div className="mt-32">
+      <div className="dmt-32">
         <header className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Want to talk? I'm down.
@@ -128,22 +145,31 @@ export default function Contact() {
             />
           </div>
           <div className="flex-col space-y-4 items-end min-h-full border-white border-2 p-6 rotate-3">
-            <div className="">
+            <div className="max-w-[500px] max-h-96 overflow-auto no-scrollbar">
               {messages.map((message) => {
                 if (message.role !== "system") {
                   return (
-                    <ChatMessage text={message.content} role={message.role} />
+                    <ChatMessage
+                      key={message.role}
+                      text={message.content}
+                      role={message.role}
+                    />
                   );
                 }
                 return null;
               })}
+              <div ref={messagesContainerRef}></div>
             </div>
-            <form className="flex space-x-2">
+            <form
+              className="flex space-x-2"
+              onSubmit={(e) => e.preventDefault()}
+            >
               <input
                 id="inputField"
                 className="min-w-[500px] border-white border-2 p-2"
                 type="text"
                 placeholder="Talk to my assistant!"
+                onKeyDown={handleKeyPress}
               />
               <button
                 type="button"
