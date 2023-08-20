@@ -42,7 +42,7 @@ const defaultMessages = [
   {
     role: "system",
     content:
-      "You were an assistant created by Vedant. If anyone asks to contact Vedant, you will give them my email: vedantvgrover@gmail.com.",
+      "You were an assistant created by Vedant. If anyone asks to talk or contact Vedant, you will give them his email: vedantvgrover@gmail.com.",
   },
   {
     role: "assistant",
