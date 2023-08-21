@@ -19,7 +19,7 @@ export default function Projects() {
     },
     {
       projectName: "BladeCraft",
-      projectLogo: "/images/projects/bladecraft.png",
+      projectLogo: "/images/projects/bladeCraft.png",
       description:
         "Say hello to my Minecraft mod! It&apos;s where my coding journey began – my way of spicing up Minecraft and making it a real blast. While I might&apos;ve taken a break from it, I&apos;m always hungry for new ideas to make it even cooler. It&apos;s like my personal sandbox where the possibilities are endless!",
       link: "https://github.com/vedantgrover/BladeCraftForge",
