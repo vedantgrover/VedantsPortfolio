@@ -2,8 +2,28 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import openai from "../../lib/openai";
 
 async function sendEmail(name: string, email: string) {
-  console.log("Email Sending Function called!bn");
-  return "Successfully sent content information to Vedant!n";
+  console.log("Email Sending Function called! " + name + " " + email);
+  const response = await fetch(
+    `http://localhost:3000/api/email?email=${email}&name=${name}`,
+    {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    }
+  );
+
+  console.log(
+    `https://vedantgrover.com/api/email?email=${email}&name=${encodeURIComponent(
+      name
+    )}`
+  );
+
+  if (!response.ok) {
+    return "I apologize but something went wrong when emailing Vedant.";
+  }
+
+  return "Successfully sent content information to Vedant!";
 }
 
 export default async function handler(
@@ -20,17 +40,19 @@ export default async function handler(
       {
         name: "sendEmail",
         description:
-          "Sends me an email with the contact information of the person who wants to talk/contact/connect with me.",
+          "Sends Vedant and email with information about the person who wants to contact him.",
         parameters: {
           type: "object",
           properties: {
             name: {
               type: "string",
-              description: "The person's name.",
+              description:
+                "The name of the person who is trying to contact Vedant.",
             },
             email: {
               type: "string",
-              description: "The person's email",
+              description:
+                "The email of the person who is trying to contact Vedant",
             },
           },
           required: ["name", "email"],
@@ -43,7 +65,7 @@ export default async function handler(
   let completionResponse = chatCompletion.choices[0].message;
   // console.log(completionResponse);
 
-  let functionResponse = null;
+  let functionResponse;
   if (!completionResponse.content) {
     const functionCallName = completionResponse.function_call?.name;
     console.log(functionCallName);

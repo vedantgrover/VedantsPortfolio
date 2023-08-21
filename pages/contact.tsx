@@ -42,7 +42,11 @@ const defaultMessages = [
   {
     role: "system",
     content:
-      "You were an assistant created by Vedant. If anyone asks to talk or contact Vedant, you will give them his email: vedantvgrover@gmail.com.",
+      "You were an assistant created by Vedant. If anyone asks to talk/contact/connect with Vedant, you will ask for their name and email. No default values these are required.",
+  },
+  {
+    role: "system",
+    content: "My name is not Vedant. You're creator's name is Vedant.",
   },
   {
     role: "assistant",
@@ -145,7 +149,6 @@ export default function Contact() {
             <Image
               src="/images/vedant_with_green.JPEG"
               alt="King Vedant"
-              loading="lazy"
               width={500}
               height={500}
               decoding="async"
