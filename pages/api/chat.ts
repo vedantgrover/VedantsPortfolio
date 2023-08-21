@@ -4,7 +4,7 @@ import openai from "../../lib/openai";
 async function sendEmail(name: string, email: string) {
   console.log("Email Sending Function called! " + name + " " + email);
   const response = await fetch(
-    `http://localhost:3000/api/email?email=${email}&name=${name}`,
+    `https://vedantgrover.com/api/email?email=${email}&name=${name}`,
     {
       method: "POST",
       headers: {

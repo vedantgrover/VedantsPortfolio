@@ -100,7 +100,7 @@ export default function Contact() {
       messages: requestMessages,
     };
 
-    const response = await fetch("http://localhost:3000/api/chat", {
+    const response = await fetch("https://vedantgrover.com/api/chat", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
