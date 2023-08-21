@@ -8,7 +8,7 @@ const handler = async (req, res) => {
         await sendMail(
           "New Form Submission",
           process.env.TO_EMAIL,
-          req.query.email
+          "Name: " + req.query.name + "\nEmail: " + req.query.email
         );
         res.status(200).send("Success");
         break;
