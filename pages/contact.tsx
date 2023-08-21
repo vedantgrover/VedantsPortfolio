@@ -62,6 +62,11 @@ interface Message {
 
 export default function Contact() {
   const [messages, setMessages] = useState<Message[]>(defaultMessages);
+  const [isProcessing, setIsProcessing] = useState(false);
+
+  const placeholder = isProcessing
+    ? "Toni is responding..."
+    : "Talk to my assistant!";
 
   const messagesContainerRef = React.useRef<HTMLDivElement>(null);
 
@@ -74,6 +79,7 @@ export default function Contact() {
   }, [messages]);
 
   const handleButtonClick = async () => {
+    setIsProcessing(true);
     const inputField = document.getElementById(
       "inputField"
     ) as HTMLInputElement;
@@ -120,6 +126,7 @@ export default function Contact() {
     };
 
     setMessages((prevMessages) => [...prevMessages, assistantResponse]);
+    setIsProcessing(false);
   };
 
   let handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>): void => {
@@ -144,7 +151,7 @@ export default function Contact() {
             to say hello, I'm just a message away.
           </p>
         </header>
-        <div className="mt-16 flex flex-col md:flex-row justify-between">
+        <div className="mt-16 flex flex-col md:flex-row justify-between space-y-4">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src="/images/vedant_with_green.JPEG"
@@ -152,12 +159,12 @@ export default function Contact() {
               width={500}
               height={500}
               decoding="async"
-              className="aspect-square -rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
+              className="aspect-square rotate-0 md:-rotate-3 rounded-2xl bg-zinc-100 object-cover dark:bg-zinc-800"
               style={{ color: "transparent" }}
               unoptimized
             />
           </div>
-          <div className="flex-col space-y-4 items-end min-h-full p-6 rotate-3 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
+          <div className="flex-col space-y-4 items-end min-h-full p-2 md:p-8 rotate-0 md:rotate-3 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
             <div className="max-w-[500px] flex-1 ml-6 max-h-96 overflow-auto no-scrollbar md:mt-0">
               {messages.map((message) => {
                 if (message.role !== "system") {
@@ -179,15 +186,25 @@ export default function Contact() {
             >
               <input
                 id="inputField"
-                className="sm:w-auto min-w-[500px] flex-auto appearance-none rounded-md border border-zinc-900/10 bg-white px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/10 dark:border-zinc-700 dark:bg-zinc-700/[0.15] dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/10 sm:text-sm"
+                className={`flex-auto appearance-none rounded-md border border-zinc-900/10 ${
+                  isProcessing
+                    ? "bg-zinc-200 dark:bg-zinc-700/50"
+                    : "bg-white dark:bg-zinc-700/[0.15]"
+                } px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-400 focus:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/10 dark:border-zinc-700 dark:text-zinc-200 dark:placeholder:text-zinc-500 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/10 sm:text-sm`}
                 type="text"
-                placeholder="Talk to my assistant!"
+                placeholder={placeholder}
                 onKeyDown={handleKeyPress}
+                disabled={isProcessing}
               />
               <button
                 type="button"
-                className="inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none bg-zinc-800 font-semibold text-zinc-100 hover:bg-zinc-700 active:bg-zinc-800 active:text-zinc-100/70 dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-700 dark:active:text-zinc-100/70 flex-none"
+                className={`inline-flex items-center gap-2 justify-center rounded-md py-2 px-3 text-sm outline-offset-2 transition active:transition-none ${
+                  isProcessing
+                    ? "bg-zinc-200 cursor-not-allowed"
+                    : "bg-zinc-800 hover:bg-zinc-700 active:bg-zinc-800"
+                } font-semibold text-zinc-100 active:text-zinc-100/70 dark:bg-zinc-700 dark:hover:bg-zinc-600 dark:active:bg-zinc-700 dark:active:text-zinc-100/70 flex-none`}
                 onClick={handleButtonClick}
+                disabled={isProcessing}
               >
                 <FontAwesomeIcon
                   className="dark:text-white"
