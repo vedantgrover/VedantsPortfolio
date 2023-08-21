@@ -24,6 +24,13 @@ export default function Projects() {
         "Say hello to my Minecraft mod! It&apos;s where my coding journey began – my way of spicing up Minecraft and making it a real blast. While I might&apos;ve taken a break from it, I&apos;m always hungry for new ideas to make it even cooler. It&apos;s like my personal sandbox where the possibilities are endless!",
       link: "https://github.com/vedantgrover/BladeCraftForge",
     },
+    {
+      projectName: "Vedant's Portfolio",
+      projectLogo: "/images/projects/portfolio-logo.png",
+      description:
+        "This is the code for the portfolio you are currently on! I am using TailwindCSS for the styling (with a few custom CSS attributes), NextJS for the framework, and React. The portfolio was programmed in Typescript.",
+      link: "https://github.com/vedantgrover/VedantsPortfolio",
+    },
   ];
 
   return (
