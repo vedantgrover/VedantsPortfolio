@@ -102,7 +102,12 @@ export default function Contact() {
       throw new Error("Failed to send data");
     }
 
-    const responseData = await response.json(); // Parse the JSON response
+    const responseData = await response.json();
+
+    if (responseData.function) {
+      setMessages((prevMessages) => [...prevMessages, responseData.function]);
+    }
+    // Parse the JSON response
     const textAttribute = responseData.text;
 
     let assistantResponse: Message = {
