@@ -2,13 +2,14 @@ import { sendMail } from "../../service/mailService";
 const handler = async (req, res) => {
   try {
     const { method } = req;
+    const { name, email } = req.query;
     switch (method) {
       case "POST": {
         //Do some thing
         await sendMail(
           "New Form Submission",
           process.env.TO_EMAIL,
-          "Name: " + req.query.name + "\nEmail: " + req.query.email
+          "Name: " + name + "\nEmail: " + email
         );
         res.status(200).send("Success");
         break;
