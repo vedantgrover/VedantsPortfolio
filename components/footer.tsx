@@ -43,7 +43,7 @@ export default function Footer() {
           <FontAwesomeIcon icon={faInstagram} />
         </Link>
         <Link
-          href="https://www.linkedin.com/in/vedant-grover-523825246/"
+          href="https://www.linkedin.com/in/vedantgrover23/"
           className=" hover:text-black dark:hover:text-white"
           target="_blank"
         >
