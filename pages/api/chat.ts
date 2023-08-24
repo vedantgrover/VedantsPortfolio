@@ -47,12 +47,12 @@ export default async function handler(
             name: {
               type: "string",
               description:
-                "The name of the person who is trying to contact Vedant.",
+                "The name of the person who is trying to contact Vedant. This is required.",
             },
             email: {
               type: "string",
               description:
-                "The email of the person who is trying to contact Vedant",
+                "The email of the person who is trying to contact Vedant. This is required.",
             },
           },
           required: ["name", "email"],
