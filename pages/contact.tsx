@@ -1,5 +1,5 @@
 import ChatMessage from "@/components/chatMessage";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
+import { faPaperPlane, faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Head from "next/head";
 import Image from "next/image";
@@ -206,10 +206,17 @@ export default function Contact() {
                 onClick={handleButtonClick}
                 disabled={isProcessing}
               >
-                <FontAwesomeIcon
-                  className="dark:text-white"
-                  icon={faPaperPlane}
-                />
+                {isProcessing ? (
+                  <FontAwesomeIcon
+                    icon={faSpinner}
+                    className="animate-spin h-5 w-5"
+                  />
+                ) : (
+                  <FontAwesomeIcon
+                    className="dark:text-white"
+                    icon={faPaperPlane}
+                  />
+                )}
               </button>
             </form>
           </div>
