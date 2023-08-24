@@ -164,7 +164,7 @@ export default function Contact() {
               unoptimized
             />
           </div>
-          <div className="flex-col space-y-4 items-end min-h-full p-2 md:p-8 rotate-0 md:rotate-3 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
+          <div className="flex-col space-y-4 items-end min-h-full p-2 md:p-8 rotate-0 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
             <div className="max-w-[500px] flex-1 ml-6 max-h-96 overflow-auto no-scrollbar md:mt-0">
               {messages.map((message) => {
                 if (message.role !== "system") {
@@ -190,7 +190,7 @@ export default function Contact() {
                   isProcessing
                     ? "bg-zinc-200 dark:bg-zinc-700/50"
                     : "bg-white dark:bg-zinc-700/[0.15]"
-                } px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-500 focus:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/10 dark:border-zinc-700 dark:text-zinc-200 dark:placeholder:text-zinc-400 dark:focus:border-cyan-400 dark:focus:ring-cyan-400/10 sm:text-sm`}
+                } px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-500 focus:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/10 dark:border-zinc-700 dark:text-zinc-200 dark:placeholder:text-zinc-400 dark:focus:border-cyan-600 dark:focus:ring-cyan-400/10 sm:text-sm`}
                 type="text"
                 placeholder={placeholder}
                 onKeyDown={handleKeyPress}
