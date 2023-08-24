@@ -7,7 +7,7 @@ export default function ImageChainItem({ className, image }: ItemProps) {
   return (
     <div
       className={
-        "transform transition-transform duration-500 ease-in-out hover:scale-125 flex items-center justify-center w-48 h-48 bg-gray-300 " +
+        "transform transition-transform duration-500 ease-in-out hover:scale-150 flex items-center justify-center w-48 h-48 bg-gray-300 " +
         className
       }
     >

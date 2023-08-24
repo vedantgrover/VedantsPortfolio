@@ -7,8 +7,17 @@ import {
   faThreads,
 } from "@fortawesome/free-brands-svg-icons";
 import Link from "next/link";
+import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function Footer() {
+  const scrollToTop = () => {
+    const c = document.documentElement.scrollTop || document.body.scrollTop;
+    if (c > 0) {
+      window.requestAnimationFrame(scrollToTop);
+      window.scrollTo(0, c - c / 8);
+    }
+  };
+
   return (
     <div className="flex items-center justify-between text-gray-500 pt-24 pb-4">
       <div className="space-x-7 text-md">
@@ -47,6 +56,12 @@ export default function Footer() {
         >
           <FontAwesomeIcon icon={faThreads} />
         </Link>
+        <button
+          onClick={scrollToTop}
+          className="hover:text-black dark:hover:text-white"
+        >
+          <FontAwesomeIcon icon={faArrowUp} />
+        </button>
       </div>
 
       <div className="text-sm">

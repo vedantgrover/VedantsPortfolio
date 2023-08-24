@@ -2,7 +2,7 @@ import ImageChainItem from "./image-chain-item";
 
 export default function ImageChain() {
   return (
-    <div className="flex mt-28 items-center space-x-16">
+    <div className="flex mt-32 mb-24 items-center space-x-16">
       <ImageChainItem
         image="/images/school_vedant.JPEG"
         className="transform rotate-6"

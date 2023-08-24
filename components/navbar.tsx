@@ -28,12 +28,12 @@ export default function Navbar() {
               width={35}
               alt="Logo"
               unoptimized
-              className="rounded-full"
+              className="rounded-full transition transform ease-in-out hover:scale-125 duration-500"
             />
           </Link>
         )}
       </div>
-      <div className="bg-whiteAlpha-200 dark:bg-whiteAlpha-500 py-2 px-5 rounded-full">
+      <div className="bg-whiteAlpha-200 dark:bg-whiteAlpha-500 py-2 px-5 rounded-full transition transform ease-in-out hover:scale-125 duration-500">
         <div className="flex space-x-3 text-center">
           {navigationTabs.map(([title, url]) => (
             <Link
@@ -51,7 +51,7 @@ export default function Navbar() {
         </div>
       </div>
       <div
-        className="bg-whiteAlpha-200 dark:bg-whiteAlpha-500 py-2 px-5 rounded-full hover:cursor-pointer hover:bg-yellow-200 dark:hover:bg-purple-500"
+        className="bg-whiteAlpha-200 dark:bg-whiteAlpha-500 py-2 px-5 rounded-full transition transform hover:scale-125 duration-300 ease-in-out hover:cursor-pointer hover:bg-yellow-200 dark:hover:bg-purple-500"
         onClick={() => setColorMode(colorMode === "light" ? "dark" : "light")}
         style={{ userSelect: "none" }}
       >

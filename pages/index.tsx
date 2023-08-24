@@ -35,7 +35,7 @@ export default function Home() {
             alt="Vedant's Profile Picture"
             width={200}
             height={200}
-            className="transform transition-transform ease-in-out duration-500 hover:scale-110 rounded-full"
+            className="rounded-full"
             quality={100}
             unoptimized
           />
@@ -51,7 +51,7 @@ export default function Home() {
         </p>
 
         <Link
-          className="flex max-w-fit mt-4 rounded-full bg-cyan-600 hover:bg-cyan-700 active:bg-cyan-800"
+          className="transition ease-in-out duration-300 flex max-w-fit mt-4 rounded-full bg-cyan-600 hover:bg-cyan-700 hover:scale-110 active:bg-cyan-800"
           href="/contact"
         >
           <div className="flex justify-between items-center p-4">
