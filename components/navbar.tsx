@@ -8,8 +8,9 @@ import Image from "next/image";
 
 export default function Navbar() {
   const navigationTabs = [
-    ["Home", "/"],
     ["Projects", "/projects"],
+    ["Home", "/"],
+    ["Contact", "/contact"],
   ];
 
   const [colorMode, setColorMode] = useColorMode();
