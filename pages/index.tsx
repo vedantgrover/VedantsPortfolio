@@ -51,7 +51,7 @@ export default function Home() {
         </p>
 
         <Link
-          className="transition ease-in-out duration-300 flex max-w-fit mt-4 rounded-full bg-cyan-600 hover:bg-cyan-700 hover:scale-110 active:bg-cyan-800"
+          className="transition ease-in-out duration-300 flex max-w-fit mt-4 rounded-full bg-cyan-600 hover:bg-cyan-700 hover:scale-110 active:bg-cyan-800 active:scale-90"
           href="/contact"
         >
           <div className="flex justify-between items-center p-4">
