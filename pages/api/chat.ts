@@ -60,6 +60,8 @@ export default async function handler(
       },
     ],
     function_call: "auto",
+    temperature: 0.2,
+    max_tokens: 650,
   });
 
   let completionResponse = chatCompletion.choices[0].message;
