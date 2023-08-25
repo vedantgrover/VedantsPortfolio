@@ -165,7 +165,7 @@ export default function Contact() {
             />
           </div>
           <div className="flex-col space-y-4 items-end min-h-full p-2 md:p-8 rotate-0 rounded-2xl border border-zinc-100 dark:border-zinc-700/40">
-            <div className="max-w-[500px] flex-1 ml-6 max-h-96 overflow-auto no-scrollbar md:mt-0">
+            <div className="max-w-[500px] flex-1 ml-6 max-h-96 overflow-auto small-scrollbar md:mt-0 pr-4">
               {messages.map((message) => {
                 if (message.role !== "system") {
                   return (

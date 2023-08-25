@@ -15,9 +15,40 @@
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
     }
-  }
-}
 
-.dark {
-  background-color: #202023;
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .small-scrollbar::-webkit-scrollbar {
+      width: 0.5em; /* Set the width of the scrollbar */
+      height: 0.3em; /* Set the height of the scrollbar (smaller height) */
+    }
+
+    .small-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #d3d3d3; /* Color of the scrollbar thumb */
+      border-radius: 1em; /* Shape of the scrollbar thumb (pill shape) */
+      transition: background-color 1s ease; /* Add transition here */
+    }
+
+    .small-scrollbar::-webkit-scrollbar-thumb:hover {
+      background-color: #0891b2; /* Color of the scrollbar thumb on hover */
+    }
+
+    /* Hide scrollbar for IE and Edge */
+    .small-scrollbar {
+      scrollbar-width: thin; /* Set the width of the scrollbar */
+    }
+
+    .small-scrollbar::-webkit-scrollbar-track {
+      background-color: transparent; /* Color of the scrollbar track */
+    }
+
+    /* Dark Mode Scrollbar */
+    .dark .small-scrollbar::-webkit-scrollbar-thumb {
+      background-color: #18181a; /* Adjust the color for dark mode */
+      transition: background-color 1s ease; /* Add transition here */
+    }
+
+    .dark .small-scrollbar::-webkit-scrollbar-thumb:hover {
+      background-color: #0891b2; /* Adjust the hover color for dark mode */
+    }
+  }
 }
