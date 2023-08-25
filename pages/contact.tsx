@@ -129,7 +129,7 @@ export default function Contact() {
     setIsProcessing(false);
   };
 
-  let handleKeyPress = (e: React.KeyboardEvent<HTMLInputElement>): void => {
+  let handleKeyPress = (e: React.KeyboardEvent<HTMLTextAreaElement>): void => {
     if (e.key === "Enter") {
       e.preventDefault();
       handleButtonClick();
@@ -184,14 +184,13 @@ export default function Contact() {
               className="flex space-x-2"
               onSubmit={(e) => e.preventDefault()}
             >
-              <input
+              <textarea
                 id="inputField"
                 className={`flex-auto appearance-none rounded-md border border-zinc-900/10 ${
                   isProcessing
                     ? "bg-zinc-200 dark:bg-zinc-700/50"
                     : "bg-white dark:bg-zinc-700/[0.15]"
-                } px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-500 focus:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/10 dark:border-zinc-700 dark:text-zinc-200 dark:placeholder:text-zinc-400 dark:focus:border-cyan-600 dark:focus:ring-cyan-400/10 sm:text-sm`}
-                type="text"
+                } px-3 py-[calc(theme(spacing.2)-1px)] shadow-md shadow-zinc-800/5 placeholder:text-zinc-500 focus:border-cyan-500 focus:outline-none focus:ring-4 focus:ring-cyan-500/10 dark:border-zinc-700 dark:text-zinc-200 dark:placeholder:text-zinc-400 dark:focus:border-cyan-600 dark:focus:ring-cyan-400/10 sm:text-sm resize-y small-scrollbar min-h-fit max-h-fit`}
                 placeholder={placeholder}
                 onKeyDown={handleKeyPress}
                 disabled={isProcessing}
