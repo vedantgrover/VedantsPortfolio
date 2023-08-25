@@ -12,7 +12,7 @@ export default function Document() {
         <meta name="author" content="Vedant Grover" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
-      <body className="overflow-x-hidden no-scrollbar h-full overflow-auto">
+      <body className="overflow-x-hidden no-scrollbar">
         <Main />
         <NextScript />
       </body>
