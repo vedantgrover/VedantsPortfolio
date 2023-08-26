@@ -2,9 +2,13 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import openai from "../../lib/openai";
 
 async function sendEmail(name: string, email: string) {
+  let baseUrl =
+    process.env.NODE_ENV === "production"
+      ? "https://vedantgrover.com"
+      : "http://localhost:3000";
   console.log("Email Sending Function called! " + name + " " + email);
   const response = await fetch(
-    `https://vedantgrover.com/api/email?email=${email}&name=${name}`,
+    `${baseUrl}/api/email?email=${email}&name=${name}`,
     {
       method: "POST",
       headers: {
@@ -14,9 +18,7 @@ async function sendEmail(name: string, email: string) {
   );
 
   console.log(
-    `https://vedantgrover.com/api/email?email=${email}&name=${encodeURIComponent(
-      name
-    )}`
+    `${baseUrl}/api/email?email=${email}&name=${encodeURIComponent(name)}`
   );
 
   if (!response.ok) {
