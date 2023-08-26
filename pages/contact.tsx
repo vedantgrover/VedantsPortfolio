@@ -148,7 +148,8 @@ export default function Contact() {
           </h1>
           <p className="mt-6 text-base text-zinc-600 dark:text-zinc-400">
             If you have any questions, want to discuss a project, or simply want
-            to say hello, I'm just a message away.
+            to say hello, I'm just a message away. Toni can get you in contact
+            with me.
           </p>
         </header>
         <div className="mt-16 flex flex-col md:flex-row justify-between space-y-4">
