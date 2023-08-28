@@ -8,7 +8,7 @@ export default function ChatMessage({ text, role }: Props) {
     <div className="flex dark:text-white space-x-2">
       <p className="font-extrabold">
         {role === "assistant"
-          ? "Toni"
+          ? "TONI"
           : role.charAt(0).toUpperCase() + role.slice(1)}
         :
       </p>
