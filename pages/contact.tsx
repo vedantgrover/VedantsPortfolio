@@ -158,7 +158,7 @@ export default function Contact() {
             anytime!
           </p>
         </header>
-        <div className="mt-16 flex flex-col md:flex-row justify-between space-y-4">
+        <div className="mt-16 flex flex-col md:flex-row justify-center md:space-x-20 space-y-4">
           <div className="max-w-xs px-2.5 lg:max-w-none">
             <Image
               src="/images/vedant_with_green.JPEG"
