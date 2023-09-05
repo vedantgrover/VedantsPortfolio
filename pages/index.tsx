@@ -42,7 +42,7 @@ export default function Home() {
         </Link>
 
         <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl pt-3">
-          Swimmer, Biker, Coder
+          Swimmer, Biker, Engineer
         </h1>
         <p className="mt-6 text-[18px] text-zinc-600 dark:text-zinc-400 w-2/3">
           Hey there, I&apos;m Vedant, a Seattle-based {birthday} year old with a
@@ -57,7 +57,7 @@ export default function Home() {
           href="/contact"
         >
           <div className="flex justify-between items-center p-6 text-xl">
-            Let&apos;s Chat{" "}
+            Let&apos;s Chat
             <FontAwesomeIcon className="ml-2" icon={faArrowRight} />
           </div>
         </Link>
