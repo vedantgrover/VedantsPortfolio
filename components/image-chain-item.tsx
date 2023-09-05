@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface ItemProps {
   image: string;
   className?: string;
@@ -7,18 +9,19 @@ export default function ImageChainItem({ className, image }: ItemProps) {
   return (
     <div
       className={
-        "transform transition-transform duration-500 ease-in-out hover:scale-150 flex items-center justify-center w-48 h-48 bg-gray-300 " +
+        "relative aspect-[9/10] w-44 flex-none overflow-hidden rounded-xl bg-zinc-100 dark:bg-zinc-800 sm:w-72 sm:rounded-2xl transform duration-500 ease-in-out hover:scale-125 " +
         className
       }
     >
-      <div
-        className="w-64 h-64 rounded-3xl"
-        style={{
-          backgroundImage: `url('${image}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      ></div>
+      <Image
+        src={image}
+        alt=""
+        className="absolute inset-0 h-full w-full object-cover"
+        width={64}
+        height={128}
+        style={{ color: "transparent" }}
+        unoptimized
+      />
     </div>
   );
 }

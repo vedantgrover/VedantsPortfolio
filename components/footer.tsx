@@ -20,7 +20,7 @@ export default function Footer() {
 
   return (
     <div className="flex items-center justify-between text-gray-500 pt-24 pb-4">
-      <div className="space-x-7 text-md">
+      <div className="space-x-9 text-xl">
         <Link
           href="https://github.com/vedantgrover"
           className=" hover:text-black dark:hover:text-white"
@@ -64,7 +64,7 @@ export default function Footer() {
         </button>
       </div>
 
-      <div className="text-sm">
+      <div className="text-lg">
         &copy; {new Date().getFullYear()} Vedant Grover. All Rights Reserved.
       </div>
     </div>

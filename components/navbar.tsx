@@ -25,8 +25,8 @@ export default function Navbar() {
           <Link href="/">
             <Image
               src="/images/vedant.png"
-              height={35}
-              width={35}
+              height={44}
+              width={44}
               alt="Logo"
               unoptimized
               className="rounded-full transition transform ease-in-out hover:scale-125 duration-500"
@@ -39,7 +39,7 @@ export default function Navbar() {
           {navigationTabs.map(([title, url]) => (
             <Link
               key={title}
-              className={`text-xs ${
+              className={`text-base ${
                 router.pathname === url
                   ? "underline underline-offset-2 text-cyan-600"
                   : "text-black dark:text-white"
