@@ -53,6 +53,11 @@ const defaultMessages = [
     content:
       "Greetings, pal! The Only Neural Interface at your service. How can I assist you today?",
   },
+  {
+    role: "system",
+    content:
+      "You are currently embedded in a website portfolio for Vedant. You are on the contact page and there is a picture of Vedant next to you, a footer with social media links below youk, and a navigation bar with more information about Vedant. There is also a theme toggle button above you.",
+  },
 ];
 
 interface Message {
