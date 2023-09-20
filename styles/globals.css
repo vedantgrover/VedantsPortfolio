@@ -52,3 +52,7 @@
     }
   }
 }
+
+html .dark {
+  background-color: #202023;
+}
