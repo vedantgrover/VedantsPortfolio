@@ -4,8 +4,28 @@ import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import ImageChain from "@/components/image-chain";
+import { getSortedPostsData } from "@/lib/posts";
+import BlogPreview from "@/components/blog-preview";
 
-export default function Home() {
+export async function getStaticProps() {
+  const allPostsData = getSortedPostsData();
+  return {
+    props: {
+      allPostsData,
+    },
+  };
+}
+
+export default function Home({
+  allPostsData,
+}: {
+  allPostsData: {
+    date: string;
+    title: string;
+    id: string;
+    shortDescription: string;
+  }[];
+}) {
   const calculateTimeFromBirthday = () => {
     const birthday: Date = new Date(2006, 5, 23);
     const currentDate: Date = new Date();
@@ -65,6 +85,19 @@ export default function Home() {
         <div className="flex justify-center">
           <ImageChain />
         </div>
+      </div>
+      <div className="flex flex-col gap-16 w-1/2">
+        {allPostsData
+          .slice(0, 3)
+          .map(({ id, date, shortDescription, title }) => (
+            <BlogPreview
+              id={id}
+              title={title}
+              date={date}
+              shortDescription={shortDescription}
+              key={id}
+            />
+          ))}
       </div>
     </>
   );
