@@ -8,7 +8,7 @@ export default function Main({ children }: any) {
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
-      <div className="py-6 px-24 bg-white dark:bg-darkModeGray min-h-screen">
+      <div className="py-6 px-24 bg-white dark:bg-zinc-900 min-h-screen">
         <Navbar />
 
         <div>{children}</div>
