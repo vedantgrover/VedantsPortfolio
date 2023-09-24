@@ -1,5 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Date from "./date";
-import RightArrow from "./icons/rightArrow";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 interface BlogPreviewProps {
   id: string;
@@ -18,7 +19,7 @@ export default function BlogPreview({
     <div className="group relative flex flex-col items-start">
       <h2 className="text-base font-semibold tracking-tight text-zinc-800 dark:text-zinc-100">
         <div className="absolute -inset-x-4 -inset-y-6 z-0 scale-95 bg-zinc-50 opacity-0 transition group-hover:scale-100 group-hover:opacity-100 dark:bg-zinc-800/50 sm:-inset-x-6 sm:rounded-2xl" />
-        <a href={"/blog/" + id}>
+        <a href={"/blogs/" + id}>
           <span className="absolute -inset-x-4 -inset-y-6 z-20 sm:-inset-x-6 sm:rounded-2xl" />
           <span className="relative z-10">{title}</span>
         </a>
@@ -43,7 +44,7 @@ export default function BlogPreview({
         aria-hidden
       >
         Read Article
-        <RightArrow />
+        <FontAwesomeIcon icon={faArrowRight} className="text-cyan-600 ml-3" />
       </div>
     </div>
   );
