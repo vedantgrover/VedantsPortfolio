@@ -48,7 +48,7 @@ export default function Home({
         <title>Home - Vedant Grover</title>
       </Head>
 
-      <div className="text-black dark:text-white pt-20 px-7">
+      <div className="text-black dark:text-white pt-20 px-7 select-none">
         <Link href="/">
           <Image
             src="/images/vedant.png"

@@ -19,7 +19,7 @@ export default function Navbar() {
   const isHomePage = router.pathname === "/";
 
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between select-none">
       <div>
         {isHomePage ? null : (
           <Link href="/">

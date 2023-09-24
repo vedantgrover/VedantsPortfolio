@@ -38,7 +38,7 @@ export default function Projects() {
       <Head>
         <title>Contact - Vedant Grover</title>
       </Head>
-      <div className="my-16 sm:my-32 mx-auto max-w-2xl lg:max-w-5xl">
+      <div className="my-16 sm:my-32 mx-auto max-w-2xl select-none lg:max-w-5xl">
         <header className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Innovations I&apos;ve made to try and leave my mark on this

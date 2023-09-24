@@ -19,7 +19,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="flex items-center justify-between text-gray-500 pt-24 pb-4">
+    <div className="flex items-center justify-between text-gray-500 pt-24 pb-4 select-none">
       <div className="space-x-9 text-xl">
         <Link
           href="https://github.com/vedantgrover"

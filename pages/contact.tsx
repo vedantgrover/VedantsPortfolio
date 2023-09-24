@@ -151,7 +151,7 @@ export default function Contact() {
       <Head>
         <title>Contact - Vedant Grover</title>
       </Head>
-      <div className="mt-32">
+      <div className="mt-32 select-none">
         <header className="max-w-2xl">
           <h1 className="text-4xl font-bold tracking-tight text-zinc-800 dark:text-zinc-100 sm:text-5xl">
             Want to talk? I'm down.
