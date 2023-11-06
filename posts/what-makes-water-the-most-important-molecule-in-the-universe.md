@@ -6,7 +6,7 @@ shortDescription: "Water is crucial in our everyday lives but why? What makes it
 
 In this blog, we dive deep into the world of water, exploring its covalent and hydrogen bonding, the remarkable qualities of cohesion and adhesion, its inherent polarity, and how these factors make it essential for life on Earth. Join me on a journey to understand why water is more than just a simple molecule; it's the foundation of existence.
 
-![](/images/blog/water_cup.jpg)
+![](/images/blog/water-blog/water_cup.jpg)
 *[Image Source](https://www.truthinformed.com/wp-content/uploads/2018/01/Cup-Of-Cold-Water-e1517247188642.jpeg) - Cup of water on the table*
 
 Picture this: It's a hot summer day and you're relaxing on the lake. Everyone is enjoying themselves in the water, splashing the clear fluid up into the air. You've been running on the beach all day and finally sit down with sweat dripping down your face. You hear a sharp slap and look at the docks where a child has just belly flopped while cliff jumping. You look at the drink in your hand and notice the water clinging to the sides of the straw.
@@ -34,7 +34,7 @@ Water is an extremely complex molecule with many reasons as to why things happen
 ## What is water?
 Water consists of two different elements. **Hydrogen (H)** and **Oxygen (O)**; many times, you will see water written as **H~2~O** &mdash; which is the **chemical formula** for the molecule &mdash; and this tells us that  water is made up of **2 hydrogen atoms and one oxygen atom**.
 
-![](/images/blog/water-formula.png)
+![](/images/blog/water-blog/water-formula.png)
 
 ### Covalent Bonds
 These atoms are **bonded** through **covalent bonds** which is nothing but the linkage of atoms through shared electrons. The sharing of electrons within the water molecule isn't equal however and this is due to the difference in sizes of the two atoms. With Oxygen containing 8 protons (compared to Hydrogen's 1) it has a much larger **positive charge**. Opposites will always attract in nature and so, the **negative electron** of the Hydrogen is slightly drawn to the large postive charge of the Oxygen. 
@@ -46,7 +46,7 @@ Polarization, like all things in nature, is binary; it can either be **polar** o
 
 This also means that polar molecules and non-polar molecules **don't** interact together. In fact, they **repel** each other. Have you ever seen oil sitting on top of water? No matter how much you stir it, the two will never mix and due to oil's lesser density, it will sit right on top of the water molecules.
 
-![](/images/blog/polar-nonpolar.png)
+![](/images/blog/water-blog/polar-nonpolar.png)
 
 ## Why do we belly flop?
 Why is it that when we pencil dive into a pool, the water separates at our feet and we just disappear under the surface but when we belly flop, the water turns to concrete and it stings?
@@ -57,7 +57,7 @@ Why is it that when we pencil dive into a pool, the water separates at our feet 
 Hydrogen bonds also have great **heat absorption** capabilities. This is known as **specific heat**, or the amount of energy it takes for **1 gram** of an object to **heat up 1°C**.  
 For example, the specific heat of aluminum is 0.900 joules per gram in celsius (J/g C) whereas the specific heat of water is 4.186 J/g C. Notice how it takes much more (a little more than 4.5 times!) energy to heat up water than aluminum?
 
-![](/images/blog/hydrogen-bond.png)
+![](/images/blog/water-blog/hydrogen-bond.png)
 
 ### Cohesion
 The sticking together of two like substances is called **cohesion**. Due to the hydrogen bonds, water molecules like to stick together, **strenthening** the amount of force needed to break those bonds. This phenomenon is called **surface tension**. This is what allows for water droplets to form a dome shape when on a penny or on a wall.
@@ -65,7 +65,7 @@ The sticking together of two like substances is called **cohesion**. Due to the 
 ### Adhesion
 Wait...how do water droplets stick to walls? This is due to **adhesion** which is the ability of a substance to stick to other things. This means that not only is water attracted to its *own* charged ends, but its also **attracted** to *other polar molecules* (or other molecules with charged ends).
 
-![](/images/blog/cohesion-adhesion.jpeg)
+![](/images/blog/water-blog/cohesion-adhesion.jpeg)
 
 # How can we apply this to the real world?
 Let's picture the day at the lake again. Now that we know about water, let's look at a few of the ordinary things that happened that day in a new perspective.
@@ -83,7 +83,7 @@ Due to the reduced force in our belly flop, the hydrogen bonds ***don't* break**
 ## Water clinging to the straw
 This is a perfect example of adhesion! The water molecules are attracted to a substance that makes up the straw (it doesn't matter what that substance is. As long as it has a slight charge, water will cling to it). In fact, this is what allows trees to move water up and down their trunks! The water's cohesion helps keep water molecules together and the adhesion of water to the inner tube of the tree allow for water to move upwards and evaporate out of the top of the tree!
 
-![](/images/blog/adhesion-example.jpeg)
+![](/images/blog/water-blog/adhesion-example.jpeg)
 
 # Why is water so important?
 Whenever astonomers search for interstellar life, they are searching for water.
