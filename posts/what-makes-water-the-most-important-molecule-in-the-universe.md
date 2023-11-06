@@ -1,5 +1,5 @@
 ---
-title: "What makes water the most important molecule in the universe?"
+title: "What Makes Water the Most Important Molecule in the Universe?"
 date: "2023-09-23"
 shortDescription: "Water is crucial in our everyday lives but why? What makes it so important? Let's take a deep dive into the inner workings of this molecule and truly understand what makes it the most important molecule in the universe."
 ---
@@ -7,6 +7,7 @@ shortDescription: "Water is crucial in our everyday lives but why? What makes it
 In this blog, we dive deep into the world of water, exploring its covalent and hydrogen bonding, the remarkable qualities of cohesion and adhesion, its inherent polarity, and how these factors make it essential for life on Earth. Join me on a journey to understand why water is more than just a simple molecule; it's the foundation of existence.
 
 ![](/images/blog/water_cup.jpg)
+*[Image Source](https://www.truthinformed.com/wp-content/uploads/2018/01/Cup-Of-Cold-Water-e1517247188642.jpeg) - Cup of water on the table*
 
 Picture this: It's a hot summer day and you're relaxing on the lake. Everyone is enjoying themselves in the water, splashing the clear fluid up into the air. You've been running on the beach all day and finally sit down with sweat dripping down your face. You hear a sharp slap and look at the docks where a child has just belly flopped while cliff jumping. You look at the drink in your hand and notice the water clinging to the sides of the straw.
 

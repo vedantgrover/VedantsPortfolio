@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html
       lang="en"
-      className="h-full antialiased w-full overflow-x-hidden"
+      className="h-full antialiased overflow-x-hidden"
       style={{ backgroundSize: "cover" }}
     >
       <Head>
