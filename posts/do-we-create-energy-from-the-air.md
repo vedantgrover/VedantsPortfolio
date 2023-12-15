@@ -6,6 +6,7 @@ shortDescription: "Explore the intricate processes that sustain life, from harne
 Ever wondered how plants seem to thrive effortlessly, basking in sunlight and producing oxygen? The magic happens through two fundamental processes: Photosynthesis and Cellular Respiration. How can we make energy just by breathing? Cellular Respiration is the answer to that. Let's break it down.
 
 ![](/images/blog/photosynthesis-cellular-respiration/photosynthesis.png)
+*[Image Source](https://www.khanacademy.org/science/ap-biology/cellular-energetics/photosynthesis/a/intro-to-photosynthesis) - Shows process of photosynthesis*
 # Photosynthesis: A Sunlit Symphony
 
 ## Step 1: Light Absorption
@@ -83,6 +84,7 @@ In the chloroplasts, sunlight powers the conversion of carbon dioxide and water 
   The end result of this intricate process is the creation of glucose, a vital component that fuels the plant's activities and provides energy for other organisms within the ecosystem.
 
 ![](/images/blog/photosynthesis-cellular-respiration/electron-transfer-chain.png)
+*[Image Source](https://www.khanacademy.org/science/ap-biology/cellular-energetics/cellular-respiration-ap/a/oxidative-phosphorylation-etc) - Shows ETC diagram*
 # Electron Transport Chain
 ### Electron Flow
   The Electron Transport Chain (ETC) is a crucial stage in cellular respiration, occurring in the inner mitochondrial membrane. It involves a series of protein complexes through which electrons flow.
@@ -106,6 +108,7 @@ In the chloroplasts, sunlight powers the conversion of carbon dioxide and water 
   The electrons delivered by NADH to the ETC are eventually passed to oxygen. This process regenerates NAD+, allowing it to participate in glycolysis and the citric acid cycle again.
 
 ![](/images/blog/photosynthesis-cellular-respiration/Cellular-Respiration.png)
+*[Image Source](https://byjus.com/biology/cellular-respiration/) - Shows a diagram for cellular respiration*
 # Cellular processes for Cellular Respiration
 ### Glycolysis
   - **Location:** Cytoplasm
