@@ -10,7 +10,7 @@ const Footer = memo(() => {
     return (
         <div className="absolute bottom-0 p-6">
             <div className="flex flex-row space-x-7">
-                <Link href={"https://github.com/vedantgrover"}><Github/></Link>
+                <Link href={"https://github.com/vedantgrover"}><Github color="rgba(234, 178, 8, 1)"/></Link>
                 <Link href={"https://www.youtube.com/c/BladeDurman"}><YouTube/></Link>
                 <Link href={"https://instagram.com/vedantgrover06"}><Instagram/></Link>
                 <Link href={"https://www.linkedin.com/in/vedantgrover23"}><Linkedin/></Link>
