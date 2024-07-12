@@ -6,14 +6,16 @@ import Link from "next/link";
 interface ProjectTileInterface {
     title: string;
     href: string;
+    key?: string;
     children?: React.ReactNode;
 }
 
-const ProjectTile = memo(({title, children, href}: ProjectTileInterface) => {
+const ProjectTile = memo(({key, title, children, href}: ProjectTileInterface) => {
     const [hover, setHover] = useState(false);
 
     return (
         <div
+            key={key}
             className={`rounded-3xl  ${hover ? "bg-white" : "bg-stone-300 flex items-center justify-center"}`}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}>
