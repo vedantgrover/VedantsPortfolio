@@ -27,7 +27,7 @@ const ProjectsStackCard = memo(() => {
 
     return (
         <StackCard className="bg-stone-400">
-            <div className="grid grid-cols-2 gap-4 p-8">
+            <div className="grid grid-cols-2 gap-4 p-8 w-full h-full border">
                 {projects.map((p) => <ProjectTile key={p.link} href={p.link}
                                                   title={p.name}>{p.description}</ProjectTile>)}
             </div>

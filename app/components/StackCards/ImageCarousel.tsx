@@ -5,7 +5,7 @@ import StackCard from "@/app/components/StackCard";
 const ImageCarousel = memo(() => {
     return (
         <StackCard>
-            <div className="relative h-screen">
+            <div>
                 <Image src={"/me.jpg"} alt={"Meeeee"} layout="fill" objectFit="cover"/>
             </div>
         </StackCard>

@@ -14,7 +14,7 @@ const ProjectTile = memo(({title, children, href}: ProjectTileInterface) => {
 
     return (
         <div
-            className={`rounded-3xl min-h-96  ${hover ? "bg-white" : "bg-stone-300 flex items-center justify-center"}`}
+            className={`rounded-3xl  ${hover ? "bg-white" : "bg-stone-300 flex items-center justify-center"}`}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}>
             {hover ? <div className="flex flex-col justify-between h-full p-8">
