@@ -11,10 +11,11 @@ const Footer = memo(() => {
         <div className="absolute bottom-0 p-6">
             <div className="flex flex-row space-x-7">
                 <Link href={"https://github.com/vedantgrover"}><Github color="rgba(234, 178, 8, 1)"/></Link>
-                <Link href={"https://www.youtube.com/c/BladeDurman"}><YouTube/></Link>
-                <Link href={"https://instagram.com/vedantgrover06"}><Instagram/></Link>
-                <Link href={"https://www.linkedin.com/in/vedantgrover23"}><Linkedin/></Link>
-                <Link href={"mailto:vedantvgrover@gmail.com"}><Mail/></Link>
+                <Link href={"https://www.youtube.com/c/BladeDurman"}><YouTube color="rgba(234, 178, 8, 1)"/></Link>
+                <Link href={"https://instagram.com/vedantgrover06"}><Instagram color="rgba(234, 178, 8, 1)"/></Link>
+                <Link href={"https://www.linkedin.com/in/vedantgrover23"}><Linkedin
+                    color="rgba(234, 178, 8, 1)"/></Link>
+                <Link href={"mailto:vedantvgrover@gmail.com"}><Mail color="rgba(234, 178, 8, 1)"/></Link>
             </div>
         </div>
     )

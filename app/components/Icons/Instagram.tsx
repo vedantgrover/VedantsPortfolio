@@ -2,17 +2,22 @@
 
 import {useEffect, useState} from "react";
 
-export default function Instagram() {
+interface InstagramProps {
+    color?: string;
+}
+
+export default function Instagram({color = "rgba(0, 0, 0, 1)"}: InstagramProps) {
     const [hover, setHover] = useState(false);
-    const [backgroundColor, setBackgroundColor] = useState("rgba(234, 178, 8, 1)")
+    const [backgroundColor, setBackgroundColor] = useState(color);
 
     useEffect(() => {
         if (hover) {
-            setBackgroundColor("rgba(202, 139, 4, 1)")
+            const rgba = color!.replace(/[^,]+(?=\))/, '0.7');
+            setBackgroundColor(rgba);
         } else {
-            setBackgroundColor("rgba(234, 178, 8, 1)")
+            setBackgroundColor(color);
         }
-    }, [hover]);
+    }, [hover, color]);
 
     return (
         <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24"

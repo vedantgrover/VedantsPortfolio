@@ -12,7 +12,7 @@ export default function Github({color = "rgba(0, 0, 0, 1)"}: GithubProps) {
 
     useEffect(() => {
         if (hover) {
-            const rgba = color!.replace(/[^,]+(?=\))/, '0.8');
+            const rgba = color!.replace(/[^,]+(?=\))/, '0.7');
             setBackgroundColor(rgba);
         } else {
             setBackgroundColor(color)
