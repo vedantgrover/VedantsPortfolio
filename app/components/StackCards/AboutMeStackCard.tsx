@@ -2,25 +2,9 @@ import {memo} from "react";
 import StackCard from "@/app/components/StackCard";
 
 const AboutMeStackCard = memo(() => {
-    const calculateTimeFromBirthday = () => {
-        const birthday: Date = new Date(2006, 5, 23);
-        const currentDate: Date = new Date();
-
-        const timeDifference = currentDate.getTime() - birthday.getTime();
-
-        const milliSecondsPerYear = 1000 * 60 * 60 * 24 * 365.25;
-        const yearDifference = timeDifference / milliSecondsPerYear;
-
-        const roundedYears = Math.floor(yearDifference);
-
-        return roundedYears;
-    };
-
-    let birthday = calculateTimeFromBirthday();
-
     return (
         <StackCard className="bg-white">
-            <div className="px-16 py-24 w-[75%]">
+            <div className="px-16 py-24 2xl:w-[75%]">
                 <h1 className="font-bold text-4xl">About Me</h1>
                 <p className="text-2xl mt-8">I am passionate about creating something meaningful to the world. Through
                     my many years of experience, I have gathered knowledge on both frontend and backend technologies. I
