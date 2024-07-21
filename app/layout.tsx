@@ -15,10 +15,18 @@ export default function RootLayout({
                                    }: Readonly<{
     children: React.ReactNode;
 }>) {
+    const navBarLinks = [
+        {title: "Home", link: "/"},
+        {title: "Contact", link: "/contact"}
+    ]
+
     return (
         <html lang="en">
         <body className={inter.className}>
-        <main>{children}</main>
+        <main>
+            <div className="border">Navbar</div>
+            {children}
+        </main>
         </body>
         </html>
     );
