@@ -2,6 +2,7 @@ import React from "react";
 import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
+import Navbar from "@/app/components/navbar/Navbar";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -17,6 +18,10 @@ export default function RootLayout({
 }>) {
     const navBarLinks = [
         {title: "Home", link: "/"},
+        {title: "About", link: "/about"},
+        {title: "Stack", link: "/stack"},
+        {title: "Projects", link: "/projects"},
+        {title: "Resume", link: "/resume"},
         {title: "Contact", link: "/contact"}
     ]
 
@@ -24,8 +29,9 @@ export default function RootLayout({
         <html lang="en">
         <body className={inter.className}>
         <main>
-            <div className="border">Navbar</div>
+            <Navbar links={navBarLinks}/>
             {children}
+            <div className="border">Footer</div>
         </main>
         </body>
         </html>
