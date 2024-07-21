@@ -14,7 +14,7 @@ const Navbar = memo(({links}: NavbarProps) => {
     return (
         <nav className="flex justify-center items-end backdrop-blur-[10px] fixed w-full h-[75px]">
             <div className="bg-white rounded-3xl flex flex-row shadow-md">
-                {links.map((l) => <NavbarItem selected={pathName == l.link} title={l.title} link={l.link} />)}
+                {links.map((l) => <NavbarItem key={l.title} selected={pathName == l.link} title={l.title} link={l.link} />)}
             </div>
         </nav>
     )
