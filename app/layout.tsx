@@ -3,6 +3,7 @@ import type {Metadata} from "next";
 import {Inter} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/navbar/Navbar";
+import Footer from "@/app/components/Footer";
 
 const inter = Inter({subsets: ["latin"]});
 
@@ -31,7 +32,7 @@ export default function RootLayout({
         <main>
             <Navbar links={navBarLinks}/>
             {children}
-            <div className="border">Footer</div>
+            <Footer />
         </main>
         </body>
         </html>
