@@ -25,15 +25,15 @@ const MarqueeText = memo(() => {
                 className="whitespace-nowrap flex"
                 variants={marqueeVariants}
                 animate="animate">
-                <h1 className="mx-[20px] text-[12rem] font-black flex-shrink-0">VEDANT GROVER</h1>
-                <h1 className="mx-[20px] text-[12rem] font-black flex-shrink-0">VEDANT GROVER</h1>
+                <h1 className="mx-[20px] text-[10rem] font-black flex-shrink-0">VEDANT GROVER</h1>
+                <h1 className="mx-[20px] text-[10rem] font-black flex-shrink-0">VEDANT GROVER</h1>
             </motion.div>
             <motion.div
                 className="whitespace-nowrap flex"
                 variants={marqueeVariants}
                 animate="animate">
-                <h1 className="mx-[20px] text-[12rem] font-black flex-shrink-0">VEDANT GROVER</h1>
-                <h1 className="mx-[20px] text-[12rem] font-black flex-shrink-0">VEDANT GROVER</h1>
+                <h1 className="mx-[20px] text-[10rem] font-black flex-shrink-0">VEDANT GROVER</h1>
+                <h1 className="mx-[20px] text-[10rem] font-black flex-shrink-0">VEDANT GROVER</h1>
             </motion.div>
         </div>
     )
