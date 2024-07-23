@@ -1,7 +1,7 @@
 import {memo} from "react";
 import ChangingRoleText from "@/app/components/ChangingRoleText";
 import ImageOfMe from "@/app/components/ImageOfMe";
-import DownloadCVButton from "@/app/components/DownloadCVButton";
+import DownloadResumeButton from "@/app/components/DownloadResumeButton";
 
 const Greeting = memo(() => {
     return (
@@ -9,7 +9,7 @@ const Greeting = memo(() => {
             <h1 className="text-5xl font-[500] tracking-wider">Hi, I&apos;m <b>Vedant!</b></h1>
             <ChangingRoleText/>
             <ImageOfMe />
-            <DownloadCVButton />
+            <DownloadResumeButton />
         </div>
     )
 })

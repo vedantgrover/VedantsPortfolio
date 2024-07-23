@@ -4,7 +4,7 @@ import {memo} from "react";
 import Link from "next/link";
 import {motion} from "framer-motion";
 
-const DownloadCVButton = memo(() => {
+const DownloadResumeButton = memo(() => {
     return (
         <motion.div
             whileHover={{ translateY: -5 }}
@@ -12,12 +12,12 @@ const DownloadCVButton = memo(() => {
             <Link
                 href="https://www.dropbox.com/scl/fi/z468rpz92g8j91bhaym43/VGResume.docx?rlkey=2y3iueyosq7wxt0q7m68azczy&dl=1"
                 target="_blank" className="w-full h-full flex justify-center items-center">
-                <p className="font-bold text-xl">Download CV</p>
+                <p className="font-bold text-xl">Download Resume</p>
             </Link>
         </motion.div>
     )
 })
 
-DownloadCVButton.displayName = "DownloadCVButton";
+DownloadResumeButton.displayName = "DownloadResumeButton";
 
-export default DownloadCVButton
+export default DownloadResumeButton
