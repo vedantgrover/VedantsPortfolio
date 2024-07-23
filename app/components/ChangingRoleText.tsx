@@ -10,7 +10,8 @@ const ChangingRoleText = memo(() => {
         "Efficient Communicator",
         "Teammate",
         "Colleague",
-        "Student"
+        "Student",
+        "Innovator"
     ]
 
     const [index, setIndex] = useState(0)
