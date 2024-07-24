@@ -2,7 +2,7 @@
 
 import {memo} from "react";
 import NavbarItem from "@/app/components/navbar/NavbarItem";
-import useSectionObserver from "@/lib/useSectionObserver";
+import sectionObserver from "@/lib/sectionObserver";
 
 interface NavbarProps {
     links: { title: string, id: string }[]
@@ -10,7 +10,7 @@ interface NavbarProps {
 
 const Navbar = memo(({links}: NavbarProps) => {
     const isVisible = (sectionId: string) => {
-        return useSectionObserver(sectionId)
+        return sectionObserver(sectionId)
     }
 
     return (

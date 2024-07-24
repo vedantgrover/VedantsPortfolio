@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
 
-function useSectionObserver(sectionId: string) {
+function sectionObserver(sectionId: string) {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -29,4 +29,4 @@ function useSectionObserver(sectionId: string) {
     return isVisible
 }
 
-export default useSectionObserver
+export default sectionObserver
