@@ -21,7 +21,7 @@ const ChangingRoleText = memo(() => {
             let next = index + 1;
             setIndex(next % roles.length);
         }, 5 * 1000)
-    }, [index, setIndex])
+    }, [index, setIndex, roles])
 
     return (
         <motion.div className="min-h-[30px]" key={index} layout variants={{
