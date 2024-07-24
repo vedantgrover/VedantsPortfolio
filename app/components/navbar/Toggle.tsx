@@ -1,13 +1,21 @@
 import * as React from "react";
 import {motion} from "framer-motion";
 
-const Path = props => (
+interface PathProps {
+    d?: string,
+    variants: { closed: { d?: string, opacity?: number }, open: { d?: string, opacity?: number } },
+    transition?: { duration: number }
+}
+
+const Path = (props: PathProps) => (
     <motion.path
         fill="transparent"
         strokeWidth="3"
         stroke="hsl(0, 0%, 18%)"
         strokeLinecap="round"
-        {...props}
+        d={props.d}
+        variants={props.variants}
+        transition={props.transition}
     />
 );
 
