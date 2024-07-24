@@ -18,12 +18,11 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     const navBarLinks = [
-        {title: "Home", link: "/"},
-        {title: "About", link: "/about"},
-        {title: "Stack", link: "/stack"},
-        {title: "Projects", link: "/projects"},
-        {title: "Resume", link: "/resume"},
-        {title: "Contact", link: "/contact"}
+        {title: "Home",id: "home"},
+        {title: "About", id: "about"},
+        {title: "Stack", id: "stack"},
+        {title: "Projects", id: "projects"},
+        {title: "Contact", id: "contact"}
     ]
 
     return (
