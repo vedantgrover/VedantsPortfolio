@@ -18,7 +18,7 @@ const ImageOfMe = memo(() => {
 
     const transform = useMotionTemplate`rotateX(${xSpring}deg) rotateY(${ySpring}deg)`;
 
-    const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    const handleMouseMove = (e: any) => {
         if (!ref.current) return [0, 0];
 
         const rect = ref.current.getBoundingClientRect();
