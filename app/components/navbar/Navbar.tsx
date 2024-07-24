@@ -1,6 +1,5 @@
 'use client'
 
-import {usePathname} from "next/navigation";
 import {memo} from "react";
 import NavbarItem from "@/app/components/navbar/NavbarItem";
 import useSectionObserver from "@/lib/useSectionObserver";
@@ -10,10 +9,14 @@ interface NavbarProps {
 }
 
 const Navbar = memo(({links}: NavbarProps) => {
+    const isVisible = (sectionId: string) => {
+        return useSectionObserver(sectionId)
+    }
+
     return (
         <nav className="flex justify-center items-end backdrop-blur-[10px] fixed w-full h-[75px]">
             <div className="bg-white rounded-3xl flex flex-row shadow-md">
-                {links.map((l) => <NavbarItem key={l.title} selected={useSectionObserver(l.id)} title={l.title}
+                {links.map((l) => <NavbarItem key={l.title} selected={isVisible} title={l.title}
                                               link={l.id}/>)}
             </div>
         </nav>
