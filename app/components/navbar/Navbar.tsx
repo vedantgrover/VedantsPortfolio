@@ -3,9 +3,6 @@
 import {memo, useState} from "react";
 import NavbarItem from "@/app/components/navbar/NavbarItem";
 import useSectionObserver from "@/lib/useSectionObserver";
-import {motion} from "framer-motion";
-import Toggle from "@/app/components/navbar/Toggle";
-import Link from "next/link";
 import CollapsableNavbar from "@/app/components/navbar/CollapsableNavbar";
 
 interface NavbarProps {
@@ -19,13 +16,13 @@ const Navbar = memo(({links}: NavbarProps) => {
     const [isOpen, setIsOpen] = useState(false)
 
     const variants = {
-        open: { opacity: 1, x: 0 },
-        closed: { opacity: 1, x: "-100%" },
+        open: {opacity: 1, x: 0},
+        closed: {opacity: 1, x: "-100%"},
     }
 
     return (
         <>
-            <CollapsableNavbar />
+            <CollapsableNavbar links={links} activeSection={activeSection}/>
             <nav
                 className="justify-center items-end backdrop-blur-[10px] fixed w-full h-[75px] z-[1000] hidden md:flex">
                 <div className="bg-white rounded-3xl flex flex-row shadow-md">
