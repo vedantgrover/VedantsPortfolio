@@ -11,7 +11,7 @@ interface NavbarItemProps {
 
 const NavbarItem = memo(({ selected, title, link, key }: NavbarItemProps) => {
     return (
-        <Link key={key} href={link} className={`${selected ? "bg-green-900 text-white":"bg-white text-black"} py-[10px] px-[18px] rounded-[96px] text-center flex`}>
+        <Link key={key} href={`#${link}`} className={`${selected ? "bg-green-900 text-white":"bg-white text-black"} py-[10px] px-[18px] rounded-[96px] text-center flex`}>
             <motion.div whileHover={selected ? {translateY: 0}:{translateY: -5}} className={`${selected ? "font-bold":"font-normal"} text-[14px]`}>
                 {title}
             </motion.div>
