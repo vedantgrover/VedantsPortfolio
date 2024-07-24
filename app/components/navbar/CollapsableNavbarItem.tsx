@@ -29,7 +29,7 @@ const variants = {
 const CollapsableNavbarItem = memo(({title, link, key, selected}: CollapsableNavbarItemProps) => {
     return (
         <motion.li variants={variants} whileTap={{scale: 0.95}} key={key} className={`mb-[20px] flex items-center w-min p-4 rounded-3xl ${selected ? "bg-green-900 font-bold text-white":"bg-white font-normal text-black"}`}>
-            <Link href={`#${link} text-black border-2`}>{title}</Link>
+            <Link href={`#${link}`}>{title}</Link>
         </motion.li>
     )
 })
