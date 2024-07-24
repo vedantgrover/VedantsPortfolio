@@ -19,7 +19,7 @@ const Path = (props: PathProps) => (
     />
 );
 
-export const Toggle = ({toggle}) => (
+export const Toggle = ({toggle}: {toggle: () => void}) => (
     <button onClick={toggle}
             className="flex justify-center items-center absolute top-[18px] left-[15px] w-[50px] h-[50px] rounded-full bg-white z-[950]">
         <svg width="24" height="24" viewBox="0 0 24 24">
