@@ -2,8 +2,9 @@ import HomeSection from "@/app/sections/HomeSection";
 
 export default function Home() {
     return (
-        <div className="h-screen flex flex-col justify-between">
+        <div className="flex flex-col justify-between">
             <HomeSection/>
+            {/*<section id="about" className="h-screen">About Me</section>*/}
         </div>
     );
 }
