@@ -2,7 +2,6 @@
 
 import {memo, useState} from "react";
 import NavbarItem from "@/app/components/navbar/NavbarItem";
-import useSectionObserver from "@/lib/useSectionObserver";
 import CollapsableNavbar from "@/app/components/navbar/CollapsableNavbar";
 import useActiveSection from "@/lib/useActiveSection";
 
@@ -12,7 +11,6 @@ interface NavbarProps {
 
 const Navbar = memo(({links}: NavbarProps) => {
     const sectionIds = links.map(l => l.id);
-    const activeSection = useSectionObserver(sectionIds)
     const activeSection = useActiveSection(sectionIds)
 
     return (
