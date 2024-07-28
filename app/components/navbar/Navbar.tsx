@@ -26,8 +26,12 @@ const Navbar = memo(({links}: NavbarProps) => {
             <nav
                 className="justify-center items-end backdrop-blur-[10px] fixed w-full h-[75px] z-[1000] hidden md:flex">
                 <div className="bg-white rounded-3xl flex flex-row shadow-md">
-                    {links.map((l) => <NavbarItem key={l.title} selected={activeSection === l.id} title={l.title}
-                                                  link={l.id}/>)}
+                    {links.map((l, index) => (
+                        <div key={index}>
+                            <NavbarItem selected={activeSection === l.id} title={l.title}
+                                        link={l.id}/>
+                        </div>
+                    ))}
                 </div>
             </nav>
         </>
