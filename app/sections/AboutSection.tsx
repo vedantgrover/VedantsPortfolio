@@ -53,9 +53,9 @@ const AboutSection = memo(() => {
                             <Image
                                 src={detail.image}
                                 alt={detail.title}
-                                layout="fill"
                                 className="object-cover"
-                            />
+                                fill
+                                sizes="100vw" />
                         </motion.div>
                     ))}
                 </div>
