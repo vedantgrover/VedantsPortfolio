@@ -14,4 +14,6 @@ const AboutMeText = memo(({title, children}: AboutMeTextProps) => {
     )
 })
 
+AboutMeText.displayName = "AboutMeText"
+
 export default AboutMeText

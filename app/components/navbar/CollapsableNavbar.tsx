@@ -2,7 +2,7 @@ import {memo, useRef} from "react";
 import {motion, useCycle} from "framer-motion";
 import {useDimensions} from "@/lib/useDimensions";
 import CollapsableNavbarItem from "@/app/components/navbar/CollapsableNavbarItem";
-import {Toggle} from "@/app/components/navbar/Toggle";
+import Toggle from "@/app/components/navbar/Toggle";
 
 const sidebar = {
     open: (height = 1000) => ({

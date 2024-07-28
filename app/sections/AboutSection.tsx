@@ -24,6 +24,7 @@ const AboutSection = memo(() => {
     const {scrollYProgress} = useScroll({target: targetRef, offset: ["start start", "end end"]});
 
     const yTransforms = aboutMeDetails.map((_, index) =>
+        // eslint-disable-next-line react-hooks/rules-of-hooks
         useTransform(scrollYProgress, [0, 1], [`${index * 100}%`, `${(index - aboutMeDetails.length + 1) * 100}%`])
     );
 
@@ -63,5 +64,7 @@ const AboutSection = memo(() => {
         </motion.section>
     );
 });
+
+AboutSection.displayName = "AboutSection"
 
 export default AboutSection;

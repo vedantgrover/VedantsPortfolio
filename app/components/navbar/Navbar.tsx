@@ -1,9 +1,9 @@
 'use client'
 
-import {memo, useState} from "react";
+import {memo} from "react";
 import NavbarItem from "@/app/components/navbar/NavbarItem";
-import CollapsableNavbar from "@/app/components/navbar/CollapsableNavbar";
 import useActiveSection from "@/lib/useActiveSection";
+import CollapsableNavbar from "@/app/components/navbar/CollapsableNavbar";
 
 interface NavbarProps {
     links: { title: string, id: string }[]
