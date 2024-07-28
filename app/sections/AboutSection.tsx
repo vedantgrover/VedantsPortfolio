@@ -3,7 +3,7 @@
 import {memo, useRef} from "react";
 import AboutMeText from "@/app/components/AboutMeText";
 import Image from "next/image";
-import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
+import {motion, useScroll, useTransform} from "framer-motion";
 
 const AboutSection = memo(() => {
     const aboutMeDetails = [
@@ -23,13 +23,9 @@ const AboutSection = memo(() => {
 
     const {scrollYProgress} = useScroll({target: targetRef, offset: ["start start", "end end"]});
 
-    // Transformations for stacking effect
     const yTransforms = aboutMeDetails.map((_, index) =>
         useTransform(scrollYProgress, [0, 1], [`${index * 100}%`, `${(index - aboutMeDetails.length + 1) * 100}%`])
     );
-
-    useMotionValueEvent(scrollYProgress, "change", (latest) => console.log(latest))
-
 
     return (
         <motion.section
