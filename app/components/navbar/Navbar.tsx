@@ -4,6 +4,7 @@ import {memo, useState} from "react";
 import NavbarItem from "@/app/components/navbar/NavbarItem";
 import useSectionObserver from "@/lib/useSectionObserver";
 import CollapsableNavbar from "@/app/components/navbar/CollapsableNavbar";
+import useActiveSection from "@/lib/useActiveSection";
 
 interface NavbarProps {
     links: { title: string, id: string }[]
@@ -12,13 +13,7 @@ interface NavbarProps {
 const Navbar = memo(({links}: NavbarProps) => {
     const sectionIds = links.map(l => l.id);
     const activeSection = useSectionObserver(sectionIds)
-
-    const [isOpen, setIsOpen] = useState(false)
-
-    const variants = {
-        open: {opacity: 1, x: 0},
-        closed: {opacity: 1, x: "-100%"},
-    }
+    const activeSection = useActiveSection(sectionIds)
 
     return (
         <>
