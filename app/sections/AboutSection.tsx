@@ -3,7 +3,7 @@
 import {memo, useRef} from "react";
 import AboutMeText from "@/app/components/AboutMeText";
 import Image from "next/image";
-import {motion, useScroll, useTransform} from "framer-motion";
+import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
 
 const AboutSection = memo(() => {
     const aboutMeDetails = [
@@ -23,9 +23,19 @@ const AboutSection = memo(() => {
 
     const {scrollYProgress} = useScroll({target: targetRef, offset: ["start start", "end end"]});
 
-    const yTransforms = aboutMeDetails.map((_, index) =>
-        // eslint-disable-next-line react-hooks/rules-of-hooks
-        useTransform(scrollYProgress, [0, 1], [`${index * 100}%`, `${(index - aboutMeDetails.length + 1) * 100}%`])
+    const screenScrollToDetailSectionCoefficient = aboutMeDetails.length / (aboutMeDetails.length - 1)
+
+    const heightTransforms = aboutMeDetails.map((_, index) => {
+            if (index == 0) return "100%"
+
+            const start = (index - 1) * ((1 / aboutMeDetails.length) * screenScrollToDetailSectionCoefficient)
+            const end = (index) * ((1 / aboutMeDetails.length) * screenScrollToDetailSectionCoefficient)
+
+            console.log(index, start, end)
+
+            // eslint-disable-next-line react-hooks/rules-of-hooks
+            return useTransform(scrollYProgress, [start, end], ["0%", "100%"])
+        }
     );
 
     return (
@@ -50,13 +60,13 @@ const AboutSection = memo(() => {
                 <div className="w-[31vw] h-[31vw] flex overflow-hidden rounded-[11%] z-[100] relative flex-col">
                     {aboutMeDetails.map((detail, index) => (
                         <motion.div key={index} className="absolute top-0 left-0 w-full h-full"
-                                    style={{y: yTransforms[index], zIndex: index}}>
+                                    style={{height: heightTransforms[index], zIndex: index}}>
                             <Image
                                 src={detail.image}
                                 alt={detail.title}
                                 className="object-cover"
                                 fill
-                                sizes="100vw" />
+                                sizes="100vw"/>
                         </motion.div>
                     ))}
                 </div>
