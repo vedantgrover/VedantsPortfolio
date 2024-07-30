@@ -3,19 +3,29 @@
 import {memo, useRef} from "react";
 import AboutMeText from "@/app/components/AboutMeText";
 import Image from "next/image";
-import {motion, useMotionValueEvent, useScroll, useTransform} from "framer-motion";
+import {motion, useScroll, useTransform} from "framer-motion";
 
 const AboutSection = memo(() => {
     const aboutMeDetails = [
         {
-            title: "FIRST Robotics",
-            description: "I was a part of FRC Team 2910 as a Software Developer, Software Lead, Team Representative, and Data Analyzer.",
+            title: "Personal",
+            description: "I am a University student from Seattle, Washington, currently studying at the University of Waterloo in Toronto Ontario. I am an aspiring ML Engineer, hoping to work in big tech.",
             image: "/me1.jpg"
         },
         {
             title: "FIRST Robotics",
-            description: "I was a part of FRC Team 2910 as a Software Developer, Software Lead, Team Representative, and Data Analyzer.",
-            image: "/me.jpg"
+            description: "I was a part of FRC Team 2910 as a Software Developer, Software Lead, Team Representative, and Scouting Lead. I created data visualizations that helped us compare robots and make the best selection for the playoffs. Through this system, we've achieved 3rd internationally.",
+            image: "/me_at_robotics.jpg"
+        },
+        {
+            title: "Swim Team",
+            description: "I joined the swim team when I was 10 years old. Since then, I have gone on to win many events as a captain of the Mill Creek YMCA Swim Team, and react the district level of competition in high school. I also served as a high school swim team captain.",
+            image: "/me_at_swim.jpeg"
+        },
+        {
+            title: "Coding Journey",
+            description: "I began coding when I was 13 with a Minecraft Mod. Since then, I have worked on many more projects and hope to leave my mark on this universe.",
+            image: "/me_with_vision_pro.jpeg"
         }
     ];
 
