@@ -68,15 +68,13 @@ const AboutSection = memo(() => {
             </div>
             <div className="hidden md:flex">
                 <div className="relative overflow-hidden w-1/2 h-full">
-                    <div className="static w-full h-full">
-                        {aboutMeDetails.map((detail, index) => (
-                            <div key={index}>
-                                <AboutMeText title={detail.title}>
-                                    {detail.description}
-                                </AboutMeText>
-                            </div>
-                        ))}
-                    </div>
+                    {aboutMeDetails.map((detail, index) => (
+                        <div key={index}>
+                            <AboutMeText title={detail.title}>
+                                {detail.description}
+                            </AboutMeText>
+                        </div>
+                    ))}
                 </div>
                 <div className="sticky top-0 flex w-1/2 left-1/2 content-center items-center h-screen">
                     <div className="w-[31vw] h-[31vw] flex overflow-hidden rounded-[11%] z-[100] relative flex-col">
