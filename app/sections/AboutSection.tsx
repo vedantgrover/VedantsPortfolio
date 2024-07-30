@@ -4,6 +4,7 @@ import {memo, useRef} from "react";
 import AboutMeText from "@/app/components/AboutMeText";
 import Image from "next/image";
 import {motion, useScroll, useTransform} from "framer-motion";
+import MobileAboutMeDetail from "@/app/components/MobileAboutMeDetail";
 
 const AboutSection = memo(() => {
     const aboutMeDetails = [
@@ -55,30 +56,42 @@ const AboutSection = memo(() => {
             className="mt-0 flex"
             ref={targetRef}
         >
-            <div className="relative overflow-hidden w-1/2 h-full">
-                <div className="static w-full h-full">
+            <div className="flex md:hidden">
+                <div className="flex flex-col">
                     {aboutMeDetails.map((detail, index) => (
                         <div key={index}>
-                            <AboutMeText title={detail.title}>
-                                {detail.description}
-                            </AboutMeText>
+                            <MobileAboutMeDetail title={detail.title} description={detail.description}
+                                                 image={detail.image}/>
                         </div>
                     ))}
                 </div>
             </div>
-            <div className="sticky top-0 flex w-1/2 left-1/2 content-center items-center h-screen">
-                <div className="w-[31vw] h-[31vw] flex overflow-hidden rounded-[11%] z-[100] relative flex-col">
-                    {aboutMeDetails.map((detail, index) => (
-                        <motion.div key={index} className="absolute top-0 left-0 w-full h-full"
-                                    style={{height: heightTransforms[index], zIndex: index}}>
-                            <Image
-                                src={detail.image}
-                                alt={detail.title}
-                                className="object-cover"
-                                fill
-                                sizes="100vw"/>
-                        </motion.div>
-                    ))}
+            <div className="hidden md:flex">
+                <div className="relative overflow-hidden w-1/2 h-full">
+                    <div className="static w-full h-full">
+                        {aboutMeDetails.map((detail, index) => (
+                            <div key={index}>
+                                <AboutMeText title={detail.title}>
+                                    {detail.description}
+                                </AboutMeText>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div className="sticky top-0 flex w-1/2 left-1/2 content-center items-center h-screen">
+                    <div className="w-[31vw] h-[31vw] flex overflow-hidden rounded-[11%] z-[100] relative flex-col">
+                        {aboutMeDetails.map((detail, index) => (
+                            <motion.div key={index} className="absolute top-0 left-0 w-full h-full"
+                                        style={{height: heightTransforms[index], zIndex: index}}>
+                                <Image
+                                    src={detail.image}
+                                    alt={detail.title}
+                                    className="object-cover"
+                                    fill
+                                    sizes="100vw"/>
+                            </motion.div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </motion.section>
