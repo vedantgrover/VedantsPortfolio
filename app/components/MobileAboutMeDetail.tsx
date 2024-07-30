@@ -19,11 +19,8 @@ const MobileAboutMeDetail = memo(({title, description, image}: MobileAboutMeDeta
                     alt={title}
                     width={300}
                     height={300}
-                    className="relative -top-14 mx-auto"
-                    style={{
-                        maxWidth: "100%",
-                        height: "auto"
-                    }}/>
+                    className="object-cover h-full"
+                    />
             </div>
         </div>
     )
