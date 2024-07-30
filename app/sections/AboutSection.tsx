@@ -16,7 +16,7 @@ const AboutSection = memo(() => {
         {
             title: "FIRST Robotics",
             description: "I was a part of FRC Team 2910, where I served as a Software Developer, Software Lead, Team Representative, and Scouting Lead. I created data visualizations that helped us compare robots and make the best selections for the playoffs. Through this system, we achieved a 3rd place ranking internationally.",
-            image: "/me_at_robotics.jpg"
+            image: "/me_at_robotics.PNG"
         },
         {
             title: "Swim Team",
