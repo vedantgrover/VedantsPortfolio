@@ -9,17 +9,17 @@ const AboutSection = memo(() => {
     const aboutMeDetails = [
         {
             title: "Personal",
-            description: "I am a University student from Seattle, Washington, currently studying at the University of Waterloo in Toronto Ontario. I am an aspiring ML Engineer, hoping to work in big tech.",
+            description: "I am a university student from Seattle, Washington, currently studying at the University of Waterloo in Toronto, Ontario. I aspire to become an ML engineer and hope to work in big tech.",
             image: "/me1.jpg"
         },
         {
             title: "FIRST Robotics",
-            description: "I was a part of FRC Team 2910 as a Software Developer, Software Lead, Team Representative, and Scouting Lead. I created data visualizations that helped us compare robots and make the best selection for the playoffs. Through this system, we've achieved 3rd internationally.",
+            description: "I was a part of FRC Team 2910, where I served as a Software Developer, Software Lead, Team Representative, and Scouting Lead. I created data visualizations that helped us compare robots and make the best selections for the playoffs. Through this system, we achieved a 3rd place ranking internationally.",
             image: "/me_at_robotics.jpg"
         },
         {
             title: "Swim Team",
-            description: "I joined the swim team when I was 10 years old. Since then, I have gone on to win many events as a captain of the Mill Creek YMCA Swim Team, and react the district level of competition in high school. I also served as a high school swim team captain.",
+            description: "I joined the swim team when I was 10 years old. Since then, I have gone on to win many events as a captain of the Mill Creek YMCA Swim Team and reached the district level of competition in high school. I also served as the captain of my high school swim team.",
             image: "/me_at_swim.jpeg"
         },
         {
