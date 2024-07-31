@@ -8,7 +8,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "NEXT_SHARP_PATH: \"/tmp/node_modules/sharp\" next start",
     "lint": "next lint"
   },
   "dependencies": {
