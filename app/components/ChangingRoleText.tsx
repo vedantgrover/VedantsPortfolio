@@ -4,7 +4,7 @@ import {memo, useMemo, useState} from "react";
 import {motion} from "framer-motion";
 
 const ChangingRoleText = memo(() => {
-    const roles = [
+    const roles = useMemo(() => [
         "Full-Stack Developer",
         "Leader",
         "Efficient Communicator",
@@ -12,7 +12,7 @@ const ChangingRoleText = memo(() => {
         "Colleague",
         "Student",
         "Innovator"
-    ]
+    ], [])
 
     const [index, setIndex] = useState(0)
 

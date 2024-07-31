@@ -2,7 +2,7 @@ import {memo, useRef} from "react";
 import {motion, useCycle} from "framer-motion";
 import {useDimensions} from "@/lib/useDimensions";
 import CollapsableNavbarItem from "@/app/components/navbar/CollapsableNavbarItem";
-import {Toggle} from "@/app/components/navbar/Toggle";
+import Toggle from "@/app/components/navbar/Toggle";
 
 const sidebar = {
     open: (height = 1000) => ({
@@ -53,7 +53,9 @@ const CollapsableNavbar = memo(({links, activeSection}: CollapsableNavbarProps) 
                         variants={sidebar}/>
             <motion.ul variants={navigationVariants} className="m-0 p-[25px] absolute top-[100px] w-screen z-[925]">
                 {links.map((l, i) => (
-                    <CollapsableNavbarItem selected={activeSection === l.id} title={l.title} link={l.id} key={i}/>
+                    <div key={i}>
+                        <CollapsableNavbarItem selected={activeSection === l.id} title={l.title} link={l.id}/>
+                    </div>
                 ))}
             </motion.ul>
             <Toggle toggle={() => toggleOpen()}/>

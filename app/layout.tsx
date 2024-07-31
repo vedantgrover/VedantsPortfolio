@@ -19,14 +19,14 @@ export default function RootLayout({
 }>) {
     const navBarLinks = [
         {title: "Home",id: "home"},
-        // {title: "About", id: "about"},
+        {title: "About", id: "about"},
         // {title: "Stack", id: "stack"},
         // {title: "Projects", id: "projects"},
         // {title: "Contact", id: "contact"}
     ]
 
     return (
-        <html lang="en">
+        <html lang="en" className="!scroll-smooth">
         <body className={inter.className}>
         <main>
             <Navbar links={navBarLinks}/>
