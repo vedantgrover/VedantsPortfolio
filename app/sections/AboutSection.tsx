@@ -85,7 +85,8 @@ const AboutSection = memo(() => {
                                     src={detail.image}
                                     alt={detail.title}
                                     className="object-cover"
-                                    priority={index == 0}
+                                    priority
+                                    quality={50}
                                     fill
                                     sizes="100vw"/>
                             </motion.div>
