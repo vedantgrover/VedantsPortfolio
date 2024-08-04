@@ -3,7 +3,7 @@ import Greeting from "@/app/components/Greeting";
 
 const HomeSection = memo(() => {
     return (
-        <section id="home" className="flex justify-center items-center border h-screen">
+        <section id="home" className="flex justify-center items-center h-screen">
             <div>
                 <Greeting/>
             </div>
