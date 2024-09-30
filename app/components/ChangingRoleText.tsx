@@ -50,7 +50,7 @@ const ChangingRoleText = memo(() => {
                         translateY: {type: "spring", stiffness: 1000, damping: 200},
                         opacity: {duration: 0.5}
                     }}>
-            <p className="text-xl font-normal text-[#4d4d4d] tracking-widest">{roles[index]}</p>
+            <p className="text-xl font-normal text-[#4d4d4d] dark:text-[#b2b2b2] tracking-widest">{roles[index]}</p>
         </motion.div>
     )
 })

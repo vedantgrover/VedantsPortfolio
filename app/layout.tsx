@@ -26,7 +26,7 @@ export default function RootLayout({
     ]
 
     return (
-        <html lang="en" className="!scroll-smooth">
+        <html lang="en" className="!scroll-smooth dark:bg-zinc-800">
         <body className={inter.className}>
         <main>
             <Navbar links={navBarLinks}/>
