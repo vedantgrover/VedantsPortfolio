@@ -19,7 +19,7 @@ const NavbarItem = memo(({selected, title, link}: NavbarItemProps) => {
                     initial: {y: 0},
                     hovered: {y: selected ? 0 : -5}
                 }}
-                            className={`${selected ? "text-white font-bold" : "text-black font-normal"} relative z-10 text-[14px]`}>
+                            className={`${selected ? "text-white font-bold" : "text-black dark:text-zinc-100 font-normal"} relative z-10 text-[14px]`}>
                     {title}
                 </motion.div>
             </motion.div>
