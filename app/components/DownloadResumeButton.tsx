@@ -11,7 +11,7 @@ const DownloadResumeButton = memo(() => {
       className="w-[300px] h-[75px] rounded-full border-[6px] border-blue-200 flex flex-row justify-between shadow-md"
     >
       <Link
-        href="https://www.dropbox.com/scl/fi/z468rpz92g8j91bhaym43/VGResume.docx?rlkey=2y3iueyosq7wxt0q7m68azczy&dl=1"
+        href="https://www.dropbox.com/scl/fi/5cf3kdmidjobq3wnvxuw2/VGResume.docx?rlkey=thi3qjbn5sqkwlmbmcnyz86rj&st=2l7m77eb&dl=1"
         target="_blank"
         className="w-full h-full flex justify-center items-center"
       >
