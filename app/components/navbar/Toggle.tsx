@@ -15,7 +15,6 @@ const Path = (props: PathProps) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke="hsl(0, 0%, 18%)"
     strokeLinecap="round"
     d={props.d}
     variants={props.variants}
@@ -26,9 +25,9 @@ const Path = (props: PathProps) => (
 const Toggle = memo(({ toggle }: { toggle: () => void }) => (
   <button
     onClick={toggle}
-    className="flex justify-center items-center absolute top-[18px] left-[15px] w-[50px] h-[50px] rounded-full bg-white dark:bg-zinc-700 z-[950]"
+    className="flex justify-center items-center absolute top-[18px] left-[15px] w-[50px] h-[50px] rounded-full z-[950]"
   >
-    <svg width="24" height="24" viewBox="0 0 24 24">
+    <svg width="24" height="24" viewBox="0 0 24 24" className="dark:stroke-white stroke-black">
       <Path
         variants={{
           closed: { d: "M 2 2.5 L 20 2.5" },
