@@ -53,7 +53,7 @@ const CollapsableNavbar = memo(
         className="flex w-screen md:hidden"
       >
         <motion.div
-          className="absolute top-0 left-0 bottom-0 w-screen bg-white dark:bg-zinc-700 z-[900]"
+          className="absolute top-0 left-0 bottom-0 w-screen bg-white dark:bg-zinc-800 z-[900]"
           variants={sidebar}
         />
         <motion.ul
