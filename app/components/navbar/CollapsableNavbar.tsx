@@ -66,6 +66,7 @@ const CollapsableNavbar = memo(
                 selected={activeSection === l.id}
                 title={l.title}
                 link={l.id}
+                onClick={toggleOpen}
               />
             </div>
           ))}

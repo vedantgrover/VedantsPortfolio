@@ -6,6 +6,7 @@ interface CollapsableNavbarItemProps {
   title: string;
   link: string;
   selected: boolean;
+  onClick?: () => void;
 }
 
 const variants = {
@@ -26,7 +27,7 @@ const variants = {
 };
 
 const CollapsableNavbarItem = memo(
-  ({ title, link, selected }: CollapsableNavbarItemProps) => {
+  ({ title, link, selected, onClick }: CollapsableNavbarItemProps) => {
     return (
       <motion.li
         variants={variants}
@@ -37,7 +38,7 @@ const CollapsableNavbarItem = memo(
             : "bg-white dark:bg-zinc-700 font-normal text-black dark:text-zinc-100"
         }`}
       >
-        <Link href={`#${link}`}>{title}</Link>
+        <Link href={`#${link}`} onClick={onClick}>{title}</Link>
       </motion.li>
     );
   }
