@@ -8,7 +8,8 @@ const DownloadResumeButton = memo(() => {
   return (
     <motion.div
       whileHover={{ translateY: -5 }}
-      className="w-[300px] h-[75px] rounded-full border-[6px] border-blue-200 flex flex-row justify-between shadow-md"
+      className="w-[300px] h-[75px] rounded-full border-[6px] border-zinc-700/80 dark:border-white flex flex-row justify-between shadow-md"
+
     >
       <Link
         href="https://www.dropbox.com/scl/fi/5cf3kdmidjobq3wnvxuw2/VGResume.docx?rlkey=thi3qjbn5sqkwlmbmcnyz86rj&st=2l7m77eb&dl=1"
