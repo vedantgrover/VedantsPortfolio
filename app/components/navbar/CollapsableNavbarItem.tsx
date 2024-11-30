@@ -33,7 +33,7 @@ const CollapsableNavbarItem = memo(
         whileTap={{ scale: 0.95 }}
         className={`mb-[20px] flex items-center w-min p-4 rounded-3xl ${
           selected
-            ? "bg-green-900 font-bold text-white"
+            ? "bg-[#333333] dark:bg-white dark:text-black font-bold text-white"
             : "bg-white dark:bg-zinc-700 font-normal text-black dark:text-zinc-100"
         }`}
       >

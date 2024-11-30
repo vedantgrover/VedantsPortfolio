@@ -18,7 +18,7 @@ const NavbarItem = memo(({ selected, title, link }: NavbarItemProps) => {
         {selected && (
           <motion.div
             layoutId="activeBackground"
-            className="absolute inset-0 bg-green-900 rounded-[96px] z-0"
+            className="absolute inset-0 bg-[#333333] dark:bg-white rounded-[96px] z-0"
             initial={false}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           />
@@ -30,7 +30,7 @@ const NavbarItem = memo(({ selected, title, link }: NavbarItemProps) => {
           }}
           className={`${
             selected
-              ? "text-white font-bold"
+              ? "text-white dark:text-black font-bold"
               : "text-black dark:text-zinc-100 font-normal"
           } relative z-10 text-[14px]`}
         >
