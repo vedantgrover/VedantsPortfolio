@@ -11,13 +11,13 @@ const AboutSection = memo(() => {
     {
       title: "Personal",
       description:
-        "I am a university student from Seattle, Washington, currently studying at the University of Waterloo in Toronto, Ontario. I aspire to become an ML engineer and hope to work in big tech.",
+        "I grew up in Seattle, Washington, and am currently studying at the University of Waterloo in Toronto, Ontario.",
       image: "/me1.jpg",
     },
     {
       title: "FIRST Robotics",
       description:
-        "I was a part of FRC Team 2910, where I served as a Software Developer, Software Lead, Team Representative, and Scouting Lead. I created data visualizations that helped us compare robots and make the best selections for the playoffs. Through this system, we achieved a 3rd place ranking internationally.",
+        "I was a part of FRC Team 2910, where I served as the Software Engineering Lead, Team Representative, and Data Analytics Lead. I created data visualizations that helped us compare robots and make the best selections for the playoffs. Through this system, we achieved a 3rd place ranking internationally.",
       image: "/me_at_robotics.PNG",
     },
     {
