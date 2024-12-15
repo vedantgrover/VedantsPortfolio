@@ -1,18 +1,32 @@
 "use client";
 
-import { memo } from "react";
+import { memo, useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 const DownloadResumeButton = memo(() => {
-  return (
+  const [loading, setLoading] = useState(true);
+
+  const password = useMemo<string>(() => {
+    if (process.env.RESUME_URL) {
+      setLoading(false);
+      return process.env.RESUME_URL;
+    } else {
+      setLoading(true)
+    }
+
+    return "";
+  }, [process.env.RESUME_URL]);
+
+  return loading ? (
+    <div />
+  ) : (
     <motion.div
       whileHover={{ translateY: -5 }}
       className="w-[300px] h-[75px] rounded-full border-[6px] border-zinc-700/80 dark:border-white/80 flex flex-row justify-between shadow-md"
-
     >
       <Link
-        href="https://www.dropbox.com/scl/fi/0kih6zrvbmpkcras58wsh/VGResume.docx.pdf?rlkey=1n4gm9odl2shu91doqid7t9ht&st=ic4h1zu1&dl=1"
+        href={password}
         target="_blank"
         className="w-full h-full flex justify-center items-center"
       >
@@ -22,6 +36,6 @@ const DownloadResumeButton = memo(() => {
   );
 });
 
-DownloadResumeButton.displayName = "DownloadResumeButton";
+DownloadResumeButton.displayName = "DownloadResumeButton"
 
 export default DownloadResumeButton;

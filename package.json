@@ -12,6 +12,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/env": "^15.1.0",
     "framer-motion": "^11.14.1",
     "next": "15.1.0",
     "react": "^18",

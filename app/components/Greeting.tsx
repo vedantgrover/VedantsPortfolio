@@ -11,7 +11,7 @@ const Greeting = memo(() => {
       </h1>
       <ChangingRoleText />
       <ImageOfMe />
-      <DownloadResumeButton />
+      {/* <DownloadResumeButton /> */}
     </div>
   );
 });
