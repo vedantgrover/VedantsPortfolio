@@ -1,32 +1,25 @@
 "use client";
 
-import { memo, useEffect, useMemo, useState } from "react";
+import { memo } from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
 const DownloadResumeButton = memo(() => {
-  const [loading, setLoading] = useState(true);
+  const resumeUrl = process.env.NEXT_PUBLIC_RESUME_URL;
 
-  const password = useMemo<string>(() => {
-    if (process.env.RESUME_URL) {
-      setLoading(false);
-      return process.env.RESUME_URL;
-    } else {
-      setLoading(true)
-    }
+  if (!resumeUrl) {
+    console.error("Resume URL is not defined. Make sure NEXT_PUBLIC_RESUME_URL is set in the .env.local file.");
+    return null;
+  }
 
-    return "";
-  }, [process.env.RESUME_URL]);
-
-  return loading ? (
-    <div />
-  ) : (
+  return (
     <motion.div
       whileHover={{ translateY: -5 }}
       className="w-[300px] h-[75px] rounded-full border-[6px] border-zinc-700/80 dark:border-white/80 flex flex-row justify-between shadow-md"
+
     >
       <Link
-        href={password}
+        href={resumeUrl}
         target="_blank"
         className="w-full h-full flex justify-center items-center"
       >
@@ -36,6 +29,6 @@ const DownloadResumeButton = memo(() => {
   );
 });
 
-DownloadResumeButton.displayName = "DownloadResumeButton"
+DownloadResumeButton.displayName = "DownloadResumeButton";
 
 export default DownloadResumeButton;
