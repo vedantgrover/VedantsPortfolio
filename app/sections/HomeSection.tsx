@@ -11,7 +11,7 @@ const HomeSection = memo(() => {
       <div>
         <Greeting />
       </div>
-      <div className="absolute bottom-10">
+      <div className="xs: hidden md:flex absolute bottom-10">
         <ScrollButton />
       </div>
     </section>
