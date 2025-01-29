@@ -25,6 +25,7 @@ const MobileAboutMeDetail = memo(
             width={300}
             height={300}
             className="object-cover h-full"
+            priority={true}
           />
         </div>
       </div>

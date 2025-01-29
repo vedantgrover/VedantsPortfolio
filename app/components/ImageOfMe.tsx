@@ -11,7 +11,7 @@ const ImageOfMe = memo(() => {
         alt={"Vedant"}
         width={300}
         height={300}
-        priority
+        priority={true}
         className="relative -top-14 mx-auto"
         style={{
           maxWidth: "100%",

@@ -102,7 +102,7 @@ const AboutSection = memo(() => {
                   src={detail.image}
                   alt={detail.title}
                   className="object-cover"
-                  priority
+                  priority={true}
                   quality={50}
                   fill
                   sizes="100vw"
