@@ -15,14 +15,14 @@
     "@next/env": "^15.1.0",
     "framer-motion": "^12.0.6",
     "next": "15.1.6",
-    "react": "^18",
-    "react-dom": "^18",
+    "react": "^19",
+    "react-dom": "^19",
     "tailwindcss": "^4.0.1"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.1",
     "@types/node": "^22",
-    "@types/react": "^18",
+    "@types/react": "^19",
     "@types/react-dom": "^18",
     "eslint": "9.19.0",
     "eslint-config-next": "15.1.6",
