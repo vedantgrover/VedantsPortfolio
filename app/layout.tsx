@@ -4,6 +4,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/app/components/navbar/Navbar";
 import Footer from "@/app/components/Footer";
+import SplashScreen from "./components/SplashScreen";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en" className="!scroll-smooth dark:bg-zinc-800 no-scrollbar">
       <body className={inter.className}>
         <main>
+          <SplashScreen />
           <Navbar links={navBarLinks} />
           {children}
           <Footer />
