@@ -37,7 +37,7 @@ const SplashScreen = () => {
       >
         <div className="flex flex-col items-center">
           <div className="relative">
-            <h1 className="text-4xl font-bold text-zinc-800 dark:text-white">
+            <h1 className="text-center text-4xl font-bold text-zinc-800 dark:text-white">
               {text}
               <motion.span
                 initial={{ opacity: 0 }}
