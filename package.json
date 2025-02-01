@@ -1,5 +1,6 @@
 {
   "name": "vedantsportfolio",
+  "homepage": "https://www.vedantgrover.com",
   "version": "0.1.0",
   "engines": {
     "node": "18.x.x|| 19.x.x|| 20.x.x || 21.x.x"
