@@ -19,7 +19,7 @@ const SplashScreen = () => {
         // Wait for a moment after typing completes before fading out
         setTimeout(() => setIsVisible(false), 1000);
       }
-    }, 100); // Adjust typing speed here (milliseconds per character)
+    }, 75); // Adjust typing speed here (milliseconds per character)
 
     return () => clearInterval(typingInterval);
   }, []);
