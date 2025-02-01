@@ -2,12 +2,16 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import useImageLoading from "@/lib/useImageLoading";
 
 const SplashScreen = () => {
   const [isVisible, setIsVisible] = useState(true);
   const [text, setText] = useState("");
+  const [typingComplete, setTypingComplete] = useState(false);
   const fullText = "Let's Build Something Amazing.";
+  const imagesLoaded = useImageLoading();
 
+  // Handle typing animation
   useEffect(() => {
     let currentIndex = 0;
     const typingInterval = setInterval(() => {
@@ -16,20 +20,26 @@ const SplashScreen = () => {
         currentIndex++;
       } else {
         clearInterval(typingInterval);
-        // Wait for a moment after typing completes before fading out
-        setTimeout(() => setIsVisible(false), 1000);
+        setTypingComplete(true);
       }
-    }, 75); // Adjust typing speed here (milliseconds per character)
+    }, 100);
 
     return () => clearInterval(typingInterval);
   }, []);
+
+  // Handle fade out after both typing and images are complete
+  useEffect(() => {
+    if (typingComplete && imagesLoaded) {
+      // Add a small delay before fading out
+      setTimeout(() => setIsVisible(false), 500);
+    }
+  }, [typingComplete, imagesLoaded]);
 
   if (!isVisible) return null;
 
   return (
     <AnimatePresence>
       <motion.div
-        key="splash-screen"
         className="fixed inset-0 z-[9999] flex items-center justify-center bg-white dark:bg-zinc-800"
         initial={{ opacity: 1 }}
         exit={{ opacity: 0 }}
@@ -37,7 +47,7 @@ const SplashScreen = () => {
       >
         <div className="flex flex-col items-center">
           <div className="relative">
-            <h1 className="text-center text-2xl md:text-4xl font-bold text-zinc-800 dark:text-white">
+            <h1 className="text-4xl font-bold text-zinc-800 dark:text-white">
               {text}
               <motion.span
                 initial={{ opacity: 0 }}
@@ -57,6 +67,15 @@ const SplashScreen = () => {
             animate={{ width: 96 }}
             transition={{ delay: 0.3, duration: 0.5 }}
           />
+          {typingComplete && !imagesLoaded && (
+            <motion.p
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              className="mt-4 text-sm text-zinc-600 dark:text-zinc-400"
+            >
+              Loading assets...
+            </motion.p>
+          )}
         </div>
       </motion.div>
     </AnimatePresence>
