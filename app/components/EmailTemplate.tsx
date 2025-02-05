@@ -6,7 +6,7 @@ interface EmailTemplateProps {
   message: string;
 }
 
-const EmailTemplate: React.FC<EmailTemplateProps> = ({ senderName, senderEmail, message }) => {
+const EmailTemplate = ({ senderName, senderEmail, message }: EmailTemplateProps) => {
   return (
     <div className="font-sans text-gray-800 leading-relaxed">
       <h2 className="text-xl font-bold mb-4">New Connection Request</h2>
