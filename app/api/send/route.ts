@@ -1,9 +1,9 @@
 import EmailTemplate from "@/app/components/EmailTemplate";
 import { Resend } from "resend";
 
-const resend = new Resend(process.env.NEXT_RESEND_API_KEY);
-
 export async function POST(request: Request) {
+    const resend = new Resend(process.env.NEXT_PUBLIC_RESEND_API_KEY);
+
     try {
         // Get the form data from the request
         const { senderName, senderEmail, message } = await request.json();
@@ -15,7 +15,7 @@ export async function POST(request: Request) {
             );
         }
 
-        if (!process.env.NEXT_RESEND_API_KEY) {
+        if (!process.env.NEXT_PUBLIC_RESEND_API_KEY) {
             console.error("Missing Resend API key");
             return Response.json(
                 { error: "Server configuration error" },
@@ -25,7 +25,7 @@ export async function POST(request: Request) {
 
         const { data, error } = await resend.emails.send({
             from: "Portfolio <contact@vedantgrover.com>",
-            to: process.env.NEXT_PERSONAL_EMAIL!,
+            to: process.env.NEXT_PUBLIC_PERSONAL_EMAIL!,
             subject: "New Connection Request",
             react: EmailTemplate({ senderName, senderEmail, message }),
         });
