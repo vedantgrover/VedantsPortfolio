@@ -8,6 +8,7 @@ export default function ContactSection() {
     message: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -36,13 +37,17 @@ export default function ContactSection() {
       const data = await response.json();
 
       if (response.ok) {
+        setIsSubmitted(true);
         // Clear the form
         setFormData({
           fullName: "",
           email: "",
           message: "",
         });
-        alert("Message sent successfully!");
+
+        setTimeout(() => {
+          setIsSubmitted(false);
+        }, 3000);
       } else {
         throw new Error(data.error || "Failed to send message");
       }
@@ -102,12 +107,21 @@ export default function ContactSection() {
           />
           <button
             type="submit"
-            className="p-4 bg-[#333333] dark:bg-white text-white dark:text-black 
-                     rounded-2xl font-bold text-lg hover:opacity-90 
-                     transition-opacity shadow-md"
-                     disabled={isSubmitting}
+            disabled={isSubmitting}
+            className={`w-full py-4 text-white font-bold rounded-lg transition-all duration-300 
+    ${isSubmitting ? "bg-gray-400 cursor-not-allowed" : ""}
+    ${
+      isSubmitted
+        ? "bg-green-500"
+        : "bg-black dark:bg-white dark:text-black hover:bg-opacity-80"
+    }
+  `}
           >
-            {isSubmitting ? "Sending..." : "Send Message"}
+            {isSubmitting
+              ? "Sending..."
+              : isSubmitted
+              ? "Message sent!"
+              : "Send message"}
           </button>
         </form>
       </div>
