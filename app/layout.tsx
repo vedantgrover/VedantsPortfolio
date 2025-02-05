@@ -24,7 +24,7 @@ export default function RootLayout({
     { title: "About", id: "about" },
     // {title: "Stack", id: "stack"},
     // {title: "Projects", id: "projects"},
-    // {title: "Contact", id: "contact"}
+    {title: "Contact", id: "contact"}
   ];
 
   return (
