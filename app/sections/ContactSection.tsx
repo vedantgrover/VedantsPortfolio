@@ -3,10 +3,11 @@ import React, { useState } from "react";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
-    firstName: "",
+    fullName: "",
     email: "",
     message: "",
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -15,10 +16,42 @@ export default function ContactSection() {
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
 
-    console.log("Form submitted:", formData);
+    try {
+      const response = await fetch("/api/send", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          senderName: formData.fullName,
+          senderEmail: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (response.ok) {
+        // Clear the form
+        setFormData({
+          fullName: "",
+          email: "",
+          message: "",
+        });
+        alert("Message sent successfully!");
+      } else {
+        throw new Error(data.error || "Failed to send message");
+      }
+    } catch (error) {
+      console.error("Error sending message:", error);
+      alert("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -33,9 +66,9 @@ export default function ContactSection() {
         <form onSubmit={handleSubmit} className="flex flex-col space-y-6">
           <input
             type="text"
-            name="firstName"
+            name="fullName"
             placeholder="Full Name"
-            value={formData.firstName}
+            value={formData.fullName}
             onChange={handleChange}
             className="p-4 border-2 border-zinc-300 dark:border-zinc-600 rounded-2xl 
                      bg-white dark:bg-zinc-700 text-black dark:text-white
@@ -72,8 +105,9 @@ export default function ContactSection() {
             className="p-4 bg-[#333333] dark:bg-white text-white dark:text-black 
                      rounded-2xl font-bold text-lg hover:opacity-90 
                      transition-opacity shadow-md"
+                     disabled={isSubmitting}
           >
-            Send Message
+            {isSubmitting ? "Sending..." : "Send Message"}
           </button>
         </form>
       </div>
