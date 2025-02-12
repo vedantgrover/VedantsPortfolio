@@ -11,16 +11,21 @@ export default function ValentinePage() {
   const [imageBearPositions, setImageBearPositions] = useState(generateBearPositions(4));
 
   const phrases = [
-    "Hey there...",
-    "I was wondering...",
-    "Will you be my Valentine? 💖",
+    "Hey Rudraa...",
+    "So you're single for Valentine's Day? 👀",
+    "Wait so am I...😏",
+    "I can't bear the thought...🐻",
+    "of not spending Valentine's Day...😩",
+    "with you...🙃",
+    "Wanna be my Valentine? 💖",
   ];
 
   const bearImages = [
     "/bear1.jpeg",
     "/bear2.png",
     "/bear3.png",
-    "/bear4.png"
+    "/bear4.png",
+    "/bear5.png",
   ];
 
   function generateBearPositions(count: number) {
@@ -39,7 +44,7 @@ export default function ValentinePage() {
   useEffect(() => {
     const interval = setInterval(() => {
       setBearPositions(generateBearPositions(8));
-      setImageBearPositions(generateBearPositions(4));
+      setImageBearPositions(generateBearPositions(5));
     }, 3000);
 
     return () => clearInterval(interval);
@@ -149,9 +154,9 @@ export default function ValentinePage() {
 
         {/* Buttons */}
         <div className="flex space-x-4 justify-center mt-8">
-          <button className="px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-colors">
+          <a href={"https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley"} className={`${hoveringNo ? "scale-150" : "scale-100"} hover:scale-125 px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all duration-300 ease-in-out`}>
             Yes
-          </button>
+          </a>
           <button
             className={`px-4 py-2 bg-red-500 text-white rounded-lg transition-opacity hover:bg-red-600 ${
               hoveringNo ? "opacity-0" : "opacity-100"

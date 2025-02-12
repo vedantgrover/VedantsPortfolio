@@ -1,4 +1,4 @@
-import HomeSection from "./sections/HomeSection";
+import HomeSection from "../sections/HomeSection";
 import AboutSection from "@/app/sections/AboutSection";
 import ContactSection from "@/app/sections/ContactSection";
 
