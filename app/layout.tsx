@@ -10,8 +10,6 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Full Stack Developer from Seattle Washington - Vedant Grover",
-  description:
-    "I aspire to change the future one pixel at a time. Whether that is through a change in the UI/UX field or a change in the backend, I am efficient, effective, and ready to work.",
 };
 
 export default function RootLayout({
