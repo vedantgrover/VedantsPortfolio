@@ -1,13 +1,19 @@
 "use client";
 
-import { memo, useRef } from "react";
+import React, { memo, useRef, useMemo } from "react";
 import AboutMeText from "@/app/components/AboutMeText";
 import Image from "next/image";
 import { motion, useScroll, useTransform } from "framer-motion";
 import MobileAboutMeDetail from "@/app/components/MobileAboutMeDetail";
 
+interface AboutMeDetail {
+  title: string;
+  description: string;
+  image: string;
+}
+
 const AboutSection = memo(() => {
-  const aboutMeDetails = [
+  const aboutMeDetails: AboutMeDetail[] = useMemo(() => [
     {
       title: "Personal",
       description:
@@ -32,20 +38,23 @@ const AboutSection = memo(() => {
         "I began coding when I was 13 with a Minecraft Mod. Since then, I have worked on many more projects and hope to leave my mark on this universe.",
       image: "/me_with_vision_pro.jpeg",
     },
-  ];
+  ], []);
 
-  const targetRef = useRef(null);
+  const targetRef = useRef<HTMLElement>(null);
 
   const { scrollYProgress } = useScroll({
     target: targetRef,
     offset: ["start start", "end end"],
   });
 
-  const screenScrollToDetailSectionCoefficient =
-    aboutMeDetails.length / (aboutMeDetails.length - 1);
+  // Calculate height transforms for each detail section
+  const screenScrollToDetailSectionCoefficient = useMemo(
+    () => aboutMeDetails.length / (aboutMeDetails.length - 1),
+    [aboutMeDetails.length]
+  );
 
   const heightTransforms = aboutMeDetails.map((_, index) => {
-    if (index == 0) return "100%";
+    if (index === 0) return "100%";
 
     const start =
       (index - 1) *
@@ -54,11 +63,56 @@ const AboutSection = memo(() => {
       index *
       ((1 / aboutMeDetails.length) * screenScrollToDetailSectionCoefficient);
 
-    console.log(index, start, end);
-
-    // eslint-disable-next-line react-hooks/rules-of-hooks
     return useTransform(scrollYProgress, [start, end], ["0%", "100%"]);
   });
+
+  // Memoize mobile details rendering
+  const mobileDetails = useMemo(() => 
+    aboutMeDetails.map((detail) => (
+      <div key={detail.title}>
+        <MobileAboutMeDetail
+          title={detail.title}
+          description={detail.description}
+          image={detail.image}
+        />
+      </div>
+    )), 
+    [aboutMeDetails]
+  );
+
+  // Memoize desktop text details rendering
+  const desktopTextDetails = useMemo(() => 
+    aboutMeDetails.map((detail) => (
+      <div key={detail.title}>
+        <AboutMeText title={detail.title}>
+          {detail.description}
+        </AboutMeText>
+      </div>
+    )), 
+    [aboutMeDetails]
+  );
+
+  // Memoize desktop image details rendering
+  const desktopImageDetails = useMemo(() => 
+    aboutMeDetails.map((detail, index) => (
+      <motion.div
+        key={detail.title}
+        className="absolute top-0 left-0 w-full h-full"
+        style={{ height: heightTransforms[index], zIndex: index }}
+      >
+        <Image
+          src={detail.image}
+          alt={detail.title}
+          className="object-cover"
+          priority={true}
+          quality={50}
+          fill
+          sizes="(max-width: 768px) 100vw, 50vw"
+        />
+      </motion.div>
+    )), 
+    [aboutMeDetails, heightTransforms]
+  );
 
   return (
     <motion.section
@@ -66,49 +120,20 @@ const AboutSection = memo(() => {
       style={{ height: `${aboutMeDetails.length * 100}vh` }}
       className="mt-0 flex"
       ref={targetRef}
+      aria-label="About Me Sections"
     >
       <div className="flex md:hidden">
         <div className="flex flex-col">
-          {aboutMeDetails.map((detail, index) => (
-            <div key={index}>
-              <MobileAboutMeDetail
-                title={detail.title}
-                description={detail.description}
-                image={detail.image}
-              />
-            </div>
-          ))}
+          {mobileDetails}
         </div>
       </div>
       <div className="hidden md:flex">
         <div className="relative overflow-hidden w-1/2 h-full">
-          {aboutMeDetails.map((detail, index) => (
-            <div key={index}>
-              <AboutMeText title={detail.title}>
-                {detail.description}
-              </AboutMeText>
-            </div>
-          ))}
+          {desktopTextDetails}
         </div>
         <div className="sticky top-0 flex w-1/2 left-1/2 justify-center items-center h-screen">
           <div className="w-[31vw] h-[31vw] flex overflow-hidden rounded-[11%] z-[100] relative flex-col">
-            {aboutMeDetails.map((detail, index) => (
-              <motion.div
-                key={index}
-                className="absolute top-0 left-0 w-full h-full"
-                style={{ height: heightTransforms[index], zIndex: index }}
-              >
-                <Image
-                  src={detail.image}
-                  alt={detail.title}
-                  className="object-cover"
-                  priority={true}
-                  quality={50}
-                  fill
-                  sizes="100vw"
-                />
-              </motion.div>
-            ))}
+            {desktopImageDetails}
           </div>
         </div>
       </div>
