@@ -15,7 +15,7 @@
   "dependencies": {
     "@next/env": "^15.1.7",
     "framer-motion": "^12.4.7",
-    "next": "15.2.2",
+    "next": "15.2.4",
     "react": "^19",
     "react-dom": "^19",
     "resend": "^4.1.2",
