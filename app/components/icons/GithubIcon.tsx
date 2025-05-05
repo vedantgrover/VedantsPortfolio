@@ -6,6 +6,7 @@ export default function GithubIcon() {
       height="36"
       viewBox="0 0 24 24"
       fill="rgba(0, 0, 0, 1)"
+      className="fill-[#333333] dark:fill-white/80 hover:fill-black dark:hover:fill-white transition-all hover:scale-110 ease-in-out" 
     >
       <path
         fillRule="evenodd"

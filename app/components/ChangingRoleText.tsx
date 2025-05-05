@@ -1,9 +1,9 @@
 "use client";
 
-import { memo, useEffect, useMemo, useState } from "react";
-import { motion } from "framer-motion";
+import React, { memo, useEffect, useMemo, useState, useCallback } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
-const ChangingRoleText = memo(() => {
+const ChangingRoleText: React.FC = memo(() => {
   const roles = useMemo(
     () => [
       "Full-Stack Developer",
@@ -19,54 +19,59 @@ const ChangingRoleText = memo(() => {
 
   const [index, setIndex] = useState(0);
 
-  useEffect(() => {
-    const id = setInterval(() => {
-      let next = index + 1;
-      setIndex(next % roles.length);
-    }, 3 * 1000);
+  // Use useCallback to memoize the interval function
+  const cycleRoles = useCallback(() => {
+    setIndex((prevIndex) => (prevIndex + 1) % roles.length);
+  }, [roles]);
 
-    return () => clearInterval(id);
-  }, [index, roles]);
+  useEffect(() => {
+    const intervalId = setInterval(cycleRoles, 3000);
+    return () => clearInterval(intervalId);
+  }, [cycleRoles]);
+
+  // Variants for the container with stagger children
+  const containerVariants = {
+    initial: {},
+    animate: {
+      transition: {
+        staggerChildren: 0.05,
+      },
+    },
+    exit: {
+      transition: {
+        staggerChildren: 0.03,
+        staggerDirection: -1,
+      },
+    },
+  };
+
+  // Variants for each character
+  const charVariants = {
+    initial: { y: 20, opacity: 0 },
+    animate: { y: 0, opacity: 1, transition: { type: "spring", stiffness: 300, damping: 24 } },
+    exit: { y: -20, opacity: 0, transition: { duration: 0.3 } },
+  };
 
   return (
-    <motion.div
-      className="min-h-[30px]"
-      key={index}
-      initial={{ y: "102%" }}
-      animate={{ y: "0%" }}
-      exit={{ y: "-102%", transition: { duration: 4, ease: "linear" } }}
-      // layout
-      // variants={{
-      //   enter: {
-      //     translateY: 20,
-      //     opacity: 0,
-      //     height: 0,
-      //   },
-      //   center: {
-      //     zIndex: 1,
-      //     translateY: 0,
-      //     opacity: 1,
-      //     height: "auto",
-      //   },
-      //   exit: {
-      //     zIndex: 0,
-      //     translateY: -20,
-      //     opacity: 0,
-      //     height: 0,
-      //   },
-      // }}
-      // initial="enter"
-      // animate="center"
-      // exit="exit"
-      // transition={{
-      //   translateY: { type: "spring", stiffness: 1000, damping: 200 },
-      //   opacity: { duration: 0.5 },
-      // }}
-    >
-      <p className="text-xl font-normal text-[#4d4d4d] dark:text-[#b2b2b2] tracking-widest">
-        {roles[index]}
-      </p>
-    </motion.div>
+    <div className="min-h-[30px] overflow-hidden relative">
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.div
+          key={index}
+          className="text-xl font-normal text-[#4d4d4d] dark:text-[#b2b2b2] tracking-widest flex flex-wrap"
+          variants={containerVariants}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          transition={{ duration: 0.4, ease: "easeInOut" }}
+        >
+          {roles[index].split("").map((char, i) => (
+            <motion.span key={i} variants={charVariants} className="inline-block">
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 });
 
