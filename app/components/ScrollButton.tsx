@@ -8,29 +8,19 @@ const ScrollButton = memo(() => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ 
-        duration: 0.5, 
-        delay: 0.5 
+      transition={{
+        duration: 0.5,
+        delay: 0.5,
       }}
     >
-      <Link 
-        href="/#about" 
+      <Link
+        href="/#about"
         // className="block h-min w-min dark:border-white/80 border-[#333333] rounded-full border-dashed p-1 border-2"
         aria-label="Scroll to About Section"
       >
-        <motion.div
-          animate={{ 
-            y: [0, -10, 0],
-          }}
-          transition={{
-            duration: 1.25,
-            repeat: Infinity,
-            ease: "easeInOut"
-          }}
-          className="block h-min w-min dark:border-white/80 border-[#333333] rounded-full border-dashed p-1 border-2"
-        >
+        <div className="h-min w-min dark:border-white/80 border-[#333333] rounded-full p-1 border-2 animate-bounce transition-all ease-in-out hover:scale-110">
           <DownArrow />
-        </motion.div>
+        </div>
       </Link>
     </motion.div>
   );
