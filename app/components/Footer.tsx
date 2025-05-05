@@ -11,14 +11,14 @@ const Footer = memo(() => {
           &copy; {new Date().getFullYear()} Vedant Grover. All Rights Reserved
         </div>
       </div>
-      <div className="flex items-center text-lg gap-4">
+      {/* <div className="flex items-center text-lg gap-4">
         <Link href="https://github.com/vedantgrover" target="_blank">
           <GithubIcon />
         </Link>
         <Link href="https://www.linkedin.com/in/vedantgrover23/" target="_blank">
           <LinkedinIcon />
         </Link>
-      </div>
+      </div> */}
     </footer>
   );
 });
