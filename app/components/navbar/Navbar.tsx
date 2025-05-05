@@ -55,7 +55,7 @@ const Navbar = memo(({ links }: NavbarProps) => {
         className="fixed top-0 left-o w-full z-[1000] h-[75px] items-end justify-between px-8 backdrop-blur-[10px] hidden md:flex"
         aria-label="Main Navigation"
       >
-        <div className="flex flex-row gap-8">
+        <div className="flex flex-row gap-8" ref={socialsRef}>
           <Link href="https://github.com/vedantgrover" target="_blank">
             <GithubIcon />
           </Link>
@@ -72,7 +72,7 @@ const Navbar = memo(({ links }: NavbarProps) => {
         >
           {navbarItems}
         </div>
-        <div className="w-[96px]" />
+        <div style={{ width: socialsWidth }} aria-hidden />
       </nav>
     </>
   );
