@@ -63,8 +63,7 @@ const AboutSection = memo(() => {
   return (
     <motion.section
       id="about"
-      style={{ height: `${aboutMeDetails.length * 100}vh` }}
-      className="mt-0 flex"
+      className={`mt-0 h-auto md:h-[${aboutMeDetails.length * 100}vh]`}
       ref={targetRef}
     >
       <div className="flex md:hidden">
