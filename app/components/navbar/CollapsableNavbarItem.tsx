@@ -34,7 +34,7 @@ const CollapsableNavbarItem = memo(
       `mb-[20px] flex items-center w-min p-4 rounded-3xl ${
         selected
           ? "bg-[#333333] dark:bg-white dark:text-black font-bold text-white"
-          : "bg-white dark:bg-zinc-700 font-normal text-black dark:text-zinc-100"
+          : "bg-white dark:bg-zinc-800 font-normal text-black dark:text-zinc-100"
       }`, 
       [selected]
     );

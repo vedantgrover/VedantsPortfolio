@@ -5,10 +5,10 @@ import Link from "next/link";
 
 const Footer = memo(() => {
   return (
-    <footer className="flex flex-row justify-between h-[150px] px-16">
-      <div className="flex items-center text-lg">
-        <div className="dark:text-white">
-          &copy; {new Date().getFullYear()} Vedant Grover. All Rights Reserved
+    <footer className="flex flex-row justify-between h-[150px] px-8 md:px-16">
+      <div className="flex items-center">
+        <div className="dark:text-white text-sm md:text-lg">
+          &copy; {new Date().getFullYear()} Vedant Grover. All rights reserved.
         </div>
       </div>
       <div className="flex md:hidden items-center text-lg gap-4">

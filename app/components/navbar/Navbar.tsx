@@ -52,7 +52,7 @@ const Navbar = memo(({ links }: NavbarProps) => {
     <>
       <CollapsableNavbar links={links} activeSection={activeSection} />
       <nav
-        className="fixed top-0 left-o w-full z-[1000] h-[75px] items-end justify-between px-8 backdrop-blur-[10px] hidden md:flex"
+        className="fixed top-0 left-0 w-full z-[1000] h-[75px] items-end justify-between px-8 backdrop-blur-[10px] hidden md:flex"
         aria-label="Main Navigation"
       >
         <div className="flex flex-row gap-8" ref={socialsRef}>
