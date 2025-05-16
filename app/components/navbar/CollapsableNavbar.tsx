@@ -83,6 +83,9 @@ const CollapsableNavbar = memo(
           variants={navigationVariants}
           className="m-0 p-[25px] absolute top-[100px] w-screen z-[925]"
           role="menu"
+          style={{
+            pointerEvents: isOpen ? 'auto' : 'none'
+          }}
         >
           {navbarItems}
         </motion.ul>
