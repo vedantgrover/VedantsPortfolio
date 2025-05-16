@@ -47,7 +47,7 @@ const SplashScreen = () => {
       >
         <div className="flex flex-col items-center">
           <div className="relative">
-            <h1 className="text-4xl font-bold text-zinc-800 dark:text-white">
+            <h1 className="text-3xl md:text-4xl text-center font-bold text-zinc-800 dark:text-white">
               {text}
               <motion.span
                 initial={{ opacity: 0 }}
@@ -62,7 +62,7 @@ const SplashScreen = () => {
             </h1>
           </div>
           <motion.div
-            className="h-1 w-24 bg-zinc-800 dark:bg-white mt-4 rounded-full"
+            className="h-0.5 md:h-1 w-24 bg-zinc-800 dark:bg-white mt-4 rounded-full"
             initial={{ width: 0 }}
             animate={{ width: 96 }}
             transition={{ delay: 0.3, duration: 0.5 }}
@@ -71,7 +71,7 @@ const SplashScreen = () => {
             <motion.p
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="mt-4 text-sm text-zinc-600 dark:text-zinc-400"
+              className="mt-4 text-xs md:text-sm text-zinc-600 dark:text-zinc-400"
             >
               Loading assets...
             </motion.p>
