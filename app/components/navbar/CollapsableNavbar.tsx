@@ -71,11 +71,11 @@ const CollapsableNavbar = memo(
         animate={isOpen ? "open" : "closed"}
         custom={height}
         ref={containerRef}
-        className="flex w-screen md:hidden"
+        className="fixed top-0 left-0 z-[1000] h-[75px] items-end justify-between px-8 backdrop-blur-[10px] w-screen md:hidden"
         aria-label="Mobile Navigation"
       >
         <motion.div
-          className="absolute top-0 left-0 bottom-0 w-screen bg-white dark:bg-zinc-800 z-[900]"
+          className="fixed top-0 left-0 w-screen h-screen bg-white dark:bg-zinc-800 z-[900]"
           variants={sidebarVariants}
           aria-hidden="true"
         />
