@@ -305,7 +305,7 @@
     zod "^3.23.8"
     zod-to-json-schema "^3.24.1"
 
-"@napi-rs/wasm-runtime@^0.2.9":
+"@napi-rs/wasm-runtime@^0.2.10", "@napi-rs/wasm-runtime@^0.2.9":
   version "0.2.10"
   resolved "https://registry.yarnpkg.com/@napi-rs/wasm-runtime/-/wasm-runtime-0.2.10.tgz#f3b7109419c6670000b2401e0c778b98afc25f84"
   integrity sha512-bCsCyeZEwVErsGmyPNSzwfwFn4OdxBj0mmv6hOFucB/k81Ojdu68RbZdxYsRQUPc9l6SU5F/cG+bXgWs3oUgsQ==
